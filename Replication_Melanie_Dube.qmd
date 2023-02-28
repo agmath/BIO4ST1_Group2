@@ -1,10 +1,32 @@
 ---
-title: "Starter Notebook"
-author: "You, Scientist"
+title: "Intro to R for Bioinformatics"
+author: "Melanie Dube, Scientist"
 format: html
 execute:
   keep-md: true
 ---
+
+## Introduction
+
+### Activity Objectives
+
+Below are the listed objectives for this new notebook:
+
+-   Use the arrow (`<-`) operator to store objects in variables.
+
+-   Use R\'s `sample()` function to create a random \"genome\" for the purpose of testing functions.
+
+-   Build functions to process and analyze genetic data.
+
+-   Learn about `for` loops and implement them when necessary.
+
+-   Read in a real bacterial genome from a text file.
+
+-   Analyse the genome using the ideas and tools developed in the first part of the notebook.
+
+### Loading Packages
+
+First code chunk always loads needed packages (seen below).
 
 ```{r setup, include = FALSE}
 #Load in any packages you need
@@ -14,10 +36,131 @@ library(tidyverse)
 
 ```
 
-## Getting Started
+## Challenge 1
 
-You've used Quarto Notebooks a few times already, so you're starting to get the hang of this. Start by editing the Notebook `title:` and make sure you credit yourself as the `author:`. As a reminder, R-code appears in grey chunks throughout your notebook. Anything within these grey blocks must be executable R code. When you are outside of an R chunk, in a section of the notebook with a white background, you can type freely as if you were in a typical Word document.
+The first challenge is to create a list with the four nucleotides. This is done with the `c()` function.
 
-You'll quickly see the value of including text to explain your code chunks, and motivate your analysis. Trying to get help from a notebook that doesn't effectively use these discussions will be quite difficult. Additionally, future *you* will be very thankful to present-day *you* if you document your analyses well, and will be quick to curse present-day *you* when you do not. 
+```{r}
+nucleotides <- c("A", "C", "G", "T" )
 
-Now, remove this *Getting Started* text and you'll be ready to start sciencing.
+nucleotides
+```
+
+## Challenge 2
+
+The second challenge is to adapt a code to create a random strand of 15 nucleotides. This should be called `randGenome`.
+
+```{r}
+numNucleotides <- 15
+
+randGenome <- sample(nucleotides, size = numNucleotides, replace = TRUE)
+
+randGenome
+```
+
+The block above creates the list for the random genome, and the block below will collapse it and make it more readable.
+
+```{r}
+paste(randGenome, collapse = "")
+```
+
+Before comparing my block with a someone else, I predict that another classmate's will be a different random order. This is because we are instructing R to generate a random code, therefore it should be different every time we run it.
+
+## Challenge 3
+
+The third challenge is to generate a random genome that is 1500 nucleotides long and collapse it down to a single string.
+
+```{r}
+numNucleotidesChal3 <- 1500
+
+randGenomeChal3 <- sample(nucleotides, size = numNucleotidesChal3, replace = TRUE)
+
+randGenomeChal3
+
+paste(randGenomeChal3, collapse = "")
+```
+
+The block above successfully creates the 1500 unit random genome.
+
+```{r}
+set.seed(215)
+genomeLength <- 1500
+
+randGenome4 <- sample(nucleotides, size = genomeLength, replace = TRUE)
+
+randGenome4
+randGenome4 <- paste(randGenome, collapse = "")
+
+```
+
+Will need to compare this to others when able to do so.
+
+## Challenge 4
+
+The fourth challenge is to use the `set.seed(215)` command to create a random genome of 100 nucleotides in a single string.
+
+```{r}
+set.seed(215)
+genomeLength <- 100
+
+randGenome <- sample(nucleotides, size = genomeLength, replace = TRUE)
+randGenome
+paste(randGenome, collapse = "")
+
+
+```
+
+The number of Adenine (A) in this sequence: **23** (need to verify with others)
+
+### Loops
+
+Basic idea of using a `for` loop function:
+
+1.  Set an iterator (this may just be a counter or it may be floating over elements in an existing list).
+
+2.  Provide the instructions to be run each time through the loop.
+
+Practicing loops:
+
+```{r}
+mySum <- 0
+
+for(i in 1:10){
+  mySum <- mySum + i
+  print(mySum)
+}
+```
+
+## Challenge 5
+
+The fifth challenge is to initialize a variable called `myProduct` (with the value 1) and write a loop using the iterator `j`.
+
+```{r}
+myProduct <- 1
+
+for(j in 1:15){
+  myProduct <- myProduct + j
+  print(myProduct)
+}
+```
+
+This code block runs the `for` loop with the created variable. Need to verify this with others when get the chance.
+
+## Challenge 6
+
+The sixth challenge is to create a random genome sub string of 10 nucleotides and use the `paste` function to collapse to a single string. Then, we need to use a `for` loop to print out each nucleotide.
+
+```{r}
+numNucleotides <- 10
+
+randGenome <- sample(nucleotides, size = numNucleotides, replace = TRUE)
+randGenome
+paste(randGenome, collapse = "")
+randGenome <- paste(randGenome, collapse = "")
+
+for(i in 1:10){
+  print(str_sub(randGenome, start = 1L, end = -1L))
+}
+```
+
+The above code block combines multiple functions to get a simple result. First, the `randGenome` function is created for 10 random nucleotides. Next, the `for` loop function creates the nucleotides into a single string, utilizing the `str_sub` command. This creates the whole strand into a single character.
