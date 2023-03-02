@@ -4,23 +4,33 @@ format: html
 editor: visual
 ---
 
-## Quarto
+# Activity Objectives
 
-Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+Exposure to Bioinformatics work.
 
-## Running Code
+## BioInformatics Objectives:
 
-When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+-   Use the arrow (`<-`) operator to store objects in variables.
 
-```{r}
-1 + 1
+-   Use R\'s `sample()` function to create a random \"genome\" for the purpose of testing functions.
+
+-   Build functions to process and analyze genetic data.
+
+-   Learn about `for` loops and implement them when necessary.
+
+-   Read in a real bacterial genome from a text file.
+
+-   Analyse the genome using the ideas and tools developed in the first part of the notebook.
+
+## Loading Packages
+
+```{r setup, include = FALSE}
+#Load in any packages you need
+library(tidyverse)
+
+#Read in any data
 ```
 
-You can add options to executable code like this
+### Challenge 1
 
-```{r}
-#| echo: false
-2 * 2
-```
-
-The `echo: false` option disables the printing of code (only output is displayed).
+### 
