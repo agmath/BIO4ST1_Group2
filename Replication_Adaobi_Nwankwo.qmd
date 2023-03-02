@@ -8,6 +8,7 @@ execute:
 
 ```{r setup, include = FALSE}
 #Load in any packages you need
+rm(list = ls())
 library(tidyverse)
 
 #Read in any data
@@ -77,7 +78,8 @@ print(randGenome)
 ```{r}
 randGenome <- sample(nucleotides, size=genomeLength, replace = TRUE)
 randGenome
-paste(randGenome, collapse = "")
+randGenome <- paste(randGenome, collapse = "")
+randGenome
 
 for(j in 1:15){
   print(str_sub(randGenome, start = 1, end = 1))
