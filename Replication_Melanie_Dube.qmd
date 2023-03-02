@@ -14,7 +14,7 @@ Below are the listed objectives for this new notebook:
 
 -   Use the arrow (`<-`) operator to store objects in variables.
 
--   Use R\'s `sample()` function to create a random \"genome\" for the purpose of testing functions.
+-   Use R's `sample()` function to create a random "genome" for the purpose of testing functions.
 
 -   Build functions to process and analyze genetic data.
 
@@ -159,7 +159,7 @@ paste(randGenome, collapse = "")
 randGenome <- paste(randGenome, collapse = "")
 
 for(i in 1:10){
-  print(str_sub(randGenome, start = 1L, end = -1L))
+  print(str_sub(randGenome, start = i, end = i))
 }
 ```
 
