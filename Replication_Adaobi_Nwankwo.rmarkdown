@@ -15,9 +15,11 @@ library(tidyverse)
 
 ```
 
+
 ## Challenge 1
 
 Creating a list of nucleotides contaning the four nucleotides.
+
 
 ```{r}
 nucleotides <- c("Adenine (A)", "Cytosine (C), ", "Guanine (G)", "Thymine (T)")
@@ -25,9 +27,11 @@ nucleotides <- c("Adenine (A)", "Cytosine (C), ", "Guanine (G)", "Thymine (T)")
 nucleotides
 ```
 
+
 ## Challenge 2
 
 Creating a random string of 15 nucleotides.
+
 
 ```{r}
 genomeLength <- 15
@@ -37,9 +41,11 @@ randGenome <- sample(nucleotides, size = genomeLength, replace = TRUE)
 paste(randGenome, collapse = "")
 ```
 
+
 ## Challenge 3
 
 Creating a random genome which is 1500 nucleotides long.
+
 
 ```{r}
 genomeLength <- 1500
@@ -59,9 +65,11 @@ paste(randGenome, collapse = "")
 
 ```
 
+
 ## Challenge 4
 
 Looping with for loops.
+
 
 ```{r}
 mySum <- 0
@@ -72,9 +80,11 @@ for(i in 1:10){
 }
 ```
 
+
 ## Challenge 5
 
 Writing and executing a loop.
+
 
 ```{r}
 myProduct <- 1
@@ -95,9 +105,11 @@ randGenome <- paste(
 print(randGenome)
 ```
 
+
 ## Challenge 6
 
 Generating a random genome substring consisting of 10 nucleotides.
+
 
 ```{r}
 randGenome <- sample(nucleotides, size=genomeLength, replace = TRUE)
@@ -142,9 +154,11 @@ for(i in 1:nchar(randGenome)){
 }
 ```
 
+
 ## Challenge 7
 
 Adapting the loop so it provides the count of occurences of Adenine.
+
 
 ```{r}
 
@@ -164,9 +178,11 @@ for(i in 1:nchar(randGenome)){
 print(Adenine_count)
 ```
 
+
 ## Challenge 8
 
 Adapting the loop to count for the count of frequencies for each nucleotide.
+
 
 ```{r}
 randGenome 
@@ -216,7 +232,9 @@ vib_c <- scan("~/Desktop/Bioinformatics Data/Untitled.txt", what = "character", 
 vib_c
 ```
 
+
 ## Challenge 9
+
 
 ```{r}
 vib_c
@@ -261,4 +279,6 @@ print(Thymine_count)
 print(Guanine_count)
 ```
 
+
 ## Challenge 10
+
