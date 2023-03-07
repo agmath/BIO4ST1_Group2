@@ -33,4 +33,134 @@ library(tidyverse)
 
 ### Challenge 1
 
-### 
+Create a list of nucleotides using `c()`
+
+```{r}
+
+nucleotides <- c("A","C","G","T")
+```
+
+### Challenge 2
+
+Generating a random string of 15 nucleotides
+
+```{r}
+
+#Generating a random genome
+
+numNucleotides <- 15
+
+randGenome <- sample(nucleotides, size = numNucleotides, replace = TRUE)
+
+randGenome
+
+#Collapse genome into single string
+
+paste(randGenome, collapse = "")
+```
+
+### Challenge 3
+
+Generate random genome 1500 nucleotides long and use `paste()` method to collapse into a single string
+
+```{r}
+
+set.seed(215)
+
+numNucleotides <- 1500
+
+randGenome <- sample(nucleotides, size = numNucleotides, replace = TRUE)
+
+randGenome
+
+#Collapse genome into single string
+
+randGenome <- paste(randGenome, collapse = "")
+
+randGenome
+```
+
+### Challenge 4
+
+Set a seed and generate random genome consisting of 100 nucleotides and collapse it.
+
+```{r}
+set.seed(215)
+
+numNucleotides <- 100
+
+randGenome <- sample(nucleotides, size = numNucleotides, replace = TRUE)
+
+randGenome
+
+#Collapse genome into single string
+
+randGenome <- paste(randGenome, collapse = "")
+
+randGenome
+```
+
+### Challenge 5
+
+Create loop with variable `myProduct` with the value 1. Write your own for loop which takes the integer values from 1-15.
+
+```{r}
+
+myProduct <- 1
+
+for(j in 1:15){
+  mySum <- mySum + j
+  print(mySum)
+}
+```
+
+### Challenge 6
+
+Generate a random genome consisting of 10 nucleotides and collapse into a single string rather than a list. Then write a `for()` loop.
+
+```{r}
+
+numNucleotides <- 10
+
+randGenome <- sample(nucleotides, size = numNucleotides, replace = TRUE)
+
+randGenome<- paste(randGenome, collapse = "")
+
+randGenome
+
+for(i in 1:10){
+  print(str_sub(randGenome, start=i, end= i))
+}
+#Flow control - if, else if and else statements
+#Generate new random genome
+
+nucleotides <- c("A", "C", "B", "T")
+genomeLength <- 10
+
+randGenome <- paste(
+  sample(nucleotides, size = genomeLength, replace = TRUE),
+  collapse = "")
+
+print(randGenome)
+
+```
+
+### Challenge 7
+
+Adapt the loop so it counts the number of occurences of Adenine in randGenome.
+
+```{r}
+
+randGenome
+
+adenine_count <- 0
+
+#nchar = number of characters
+
+for(i in 1:nchar(randGenome)){
+  if(str_sub(randGenome, start = i, end = i) == "A"){
+    adenine_count <- adenine_count + 1
+  }
+}
+
+```
