@@ -271,3 +271,9 @@ for(i in 1:nchar(vib_c)){
 
 print(c(adenine_count2, cytosine_count2, guanine_count2, thymine_count2))
 ```
+
+# Finding the Replication Origin, Part 1
+
+### Challenge 1
+
+Generate a random genome at least 2000 nucleotides long using sample() and paste(..., collapse= "") function. Count the frequency of c
