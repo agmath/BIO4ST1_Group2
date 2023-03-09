@@ -164,3 +164,217 @@ for(i in 1:10){
 ```
 
 The above code block combines multiple functions to get a simple result. First, the `randGenome` function is created for 10 random nucleotides. Next, the `for` loop function creates the nucleotides into a single string, utilizing the `str_sub` command. This creates the whole strand into a single character.
+
+## Challenge 7
+
+This challenge asks to count the number of occurrences of Adenine in the randGenome sequence. This is done using an adaptation of the loop function. By adding `Adenine_count + 1`, the code knows to update the adenine count every time an `A` is encountered in the `randGenome`.
+
+```{r}
+randGenome
+randGenome<- paste(randGenome, collapse = "")
+Adenine_count <- 0
+for(i in 1:nchar(randGenome)){
+  if(str_sub(randGenome, start = i, end = i) == "A"){
+    Adenine_count <- Adenine_count + 1
+  }
+}
+print(Adenine_count)
+```
+
+## Challenge 8
+
+In this challenge we must count the frequencies for each of the four nucleotides.
+
+```{r}
+randGenome
+randGenome<- paste(randGenome, collapse = "")
+Guanine_count <- 0
+for(i in 1:nchar(randGenome)){
+  if(str_sub(randGenome, start = i, end = i) == "G"){
+    Guanine_count <- Guanine_count + 1
+  }
+}
+print(Guanine_count)
+```
+
+This counts the frequency for `G`.
+
+```{r}
+randGenome
+randGenome<- paste(randGenome, collapse = "")
+Cytosine_count <- 0
+for(i in 1:nchar(randGenome)){
+  if(str_sub(randGenome, start = i, end = i) == "C"){
+    Cytosine_count <- Cytosine_count + 1
+  }
+}
+print(Cytosine_count)
+```
+
+This counts the frequency for `C`.
+
+```{r}
+randGenome
+randGenome<- paste(randGenome, collapse = "")
+Thymine_count <- 0
+for(i in 1:nchar(randGenome)){
+  if(str_sub(randGenome, start = i, end = i) == "T"){
+    Thymine_count <- Thymine_count + 1
+  }
+}
+print(Thymine_count)
+```
+
+This counts the frequency for `T`.
+
+## Challenge 9
+
+Now we need to use the same concepts to count the frequencies on a real genome with over a million nucleotides.
+
+```{r}
+vib_c <- scan("~/Desktop/Bioinformatics/VibrioCholerae.txt", what = "character", sep = NULL)
+
+#vib_c
+```
+
+Above is the entire genome for Vibrio Cholerae. Below is the code to count each of the nucleotides individually.
+
+Counts for:
+
+-   A = **293,942**
+
+-   G = **256,024**
+
+-   C = **263,573**
+
+-   T = **294,711**
+
+```{r}
+vib_c<- paste(vib_c, collapse = "")
+Cytosine_count <- 0
+for(i in 1:nchar(vib_c)){
+  if(str_sub(vib_c, start = i, end = i) == "C"){
+    Cytosine_count <- Cytosine_count + 1
+  }
+}
+print(Cytosine_count)
+```
+
+```{r}
+vib_c<- paste(vib_c, collapse = "")
+Adenine_count <- 0
+for(i in 1:nchar(vib_c)){
+  if(str_sub(vib_c, start = i, end = i) == "A"){
+    Adenine_count <- Adenine_count + 1
+  }
+}
+print(Adenine_count)
+```
+
+```{r}
+vib_c<- paste(vib_c, collapse = "")
+Guanine_count <- 0
+for(i in 1:nchar(vib_c)){
+  if(str_sub(vib_c, start = i, end = i) == "G"){
+    Guanine_count <- Guanine_count + 1
+  }
+}
+print(Guanine_count)
+```
+
+```{r}
+vib_c<- paste(vib_c, collapse = "")
+Thymine_count <- 0
+for(i in 1:nchar(vib_c)){
+  if(str_sub(vib_c, start = i, end = i) == "T"){
+    Thymine_count <- Thymine_count + 1
+  }
+}
+print(Thymine_count)
+```
+
+This could also all be combined into one `for` loop, to avoid running the genome so many times. Each of the components would each be repeated three times (count, if statements, and print) for each of the individual nucleotides.
+
+## Challenge 10
+
+The tenth challenge is to navigate and verify the Rosalind challenge. The data is uploaded below and the number of individual nucleotides is calculated.
+
+```{r}
+rosalind_dna <- scan("~/Desktop/Bioinformatics/rosalind_dna.txt", what = "character", sep = NULL)
+
+rosalind_dna
+```
+
+```{r}
+rosalind_dna<- paste(rosalind_dna, collapse = "")
+Thymine_count <- 0
+Cytosine_count <- 0
+Guanine_count <- 0
+Adenine_count <- 0
+
+for(i in 1:nchar(rosalind_dna)){
+  if(str_sub(rosalind_dna, start = i, end = i) == "T"){
+    Thymine_count <- Thymine_count + 1
+  }
+  if(str_sub(rosalind_dna, start = i, end = i) == "C"){
+    Cytosine_count <- Cytosine_count + 1
+  }
+  if(str_sub(rosalind_dna, start = i, end = i) == "G"){
+    Guanine_count <- Guanine_count + 1
+  }
+  if(str_sub(rosalind_dna, start = i, end = i) == "A"){
+    Adenine_count <- Adenine_count + 1
+  }
+}
+print(Thymine_count)
+print(Cytosine_count)
+print(Guanine_count)
+print(Adenine_count)
+```
+
+Final Counts:
+
+-   T: 247
+
+-   C: 219
+
+-   G: 240
+
+-   A: 230
+
+The challenge timed out before I was able to submit and verify my answers for the first data set, a second attempt is shown below.
+
+```{r}
+rosalind_dna1 <- scan("~/Desktop/Bioinformatics/rosalind_dna1.txt", what = "character", sep = NULL)
+
+rosalind_dna1<- paste(rosalind_dna1, collapse = "")
+Thymine_count <- 0
+Cytosine_count <- 0
+Guanine_count <- 0
+Adenine_count <- 0
+
+for(i in 1:nchar(rosalind_dna1)){
+  if(str_sub(rosalind_dna1, start = i, end = i) == "T"){
+    Thymine_count <- Thymine_count + 1
+  }
+  if(str_sub(rosalind_dna1, start = i, end = i) == "C"){
+    Cytosine_count <- Cytosine_count + 1
+  }
+  if(str_sub(rosalind_dna1, start = i, end = i) == "G"){
+    Guanine_count <- Guanine_count + 1
+  }
+  if(str_sub(rosalind_dna1, start = i, end = i) == "A"){
+    Adenine_count <- Adenine_count + 1
+  }
+}
+print(Thymine_count)
+print(Cytosine_count)
+print(Guanine_count)
+print(Adenine_count)
+```
+
+After submitting the answer to Rosalind, I was able to verify that these were the correct totals for each nucleotide for this data set.
+
+```{r}
+
+```
