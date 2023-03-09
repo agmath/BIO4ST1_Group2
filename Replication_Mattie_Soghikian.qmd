@@ -12,7 +12,7 @@ Exposure to Bioinformatics work.
 
 -   Use the arrow (`<-`) operator to store objects in variables.
 
--   Use R\'s `sample()` function to create a random \"genome\" for the purpose of testing functions.
+-   Use R's `sample()` function to create a random "genome" for the purpose of testing functions.
 
 -   Build functions to process and analyze genetic data.
 
@@ -109,8 +109,8 @@ Create loop with variable `myProduct` with the value 1. Write your own for loop 
 myProduct <- 1
 
 for(j in 1:15){
-  mySum <- mySum + j
-  print(mySum)
+  myProduct <- myProduct + j
+  print(myProduct)
 }
 ```
 
@@ -134,7 +134,7 @@ for(i in 1:10){
 #Flow control - if, else if and else statements
 #Generate new random genome
 
-nucleotides <- c("A", "C", "B", "T")
+nucleotides <- c("A", "C", "G", "T")
 genomeLength <- 10
 
 randGenome <- paste(
@@ -152,8 +152,10 @@ Adapt the loop so it counts the number of occurences of Adenine in randGenome.
 ```{r}
 
 randGenome
+randGenome <- paste(randGenome, collapse = "")
+randGenome
 
-adenine_count <- 0
+adenine_count <-0
 
 #nchar = number of characters
 
@@ -163,4 +165,109 @@ for(i in 1:nchar(randGenome)){
   }
 }
 
+print(adenine_count)
+
+```
+
+### Challenge 8
+
+Adapt the loop so it will count the frequencies of each of the four individual nucleotides.
+
+```{r}
+
+randGenome
+randGenome <- paste(randGenome, collapse = "")
+randGenome
+
+adenine_count <-0
+cytosine_count <-0
+guanine_count <-0
+thymine_count <-0
+
+#nchar = number of characters
+
+for(i in 1:nchar(randGenome)){
+  if(str_sub(randGenome, start = i, end = i) == "A"){
+    adenine_count <- adenine_count + 1
+  }
+  if(str_sub(randGenome, start = i, end = i) == "C"){
+    cytosine_count <- cytosine_count + 1
+  }
+  if(str_sub(randGenome, start = i, end = i) == "G"){
+    guanine_count <- guanine_count + 1
+  }
+  if(str_sub(randGenome, start = i, end = i) == "T"){
+    thymine_count <- thymine_count + 1
+  }
+}
+
+print(c(adenine_count, cytosine_count, guanine_count, thymine_count))
+```
+
+### Challenge 9
+
+Count the frequency of each nucleotide in the *Vibrio Cholerae* chromosome.
+
+```{r}
+
+vib_c <- scan("C:/Users/soghi/OneDrive/Desktop/nucleotide.txt", what = "character", sep = NULL)
+
+vib_c 
+adenine_count1 <-0
+cytosine_count1 <-0
+guanine_count1 <-0
+thymine_count1 <-0
+
+#nchar = number of characters
+
+for(i in 1:nchar(vib_c)){
+  if(str_sub(vib_c, start = i, end = i) == "A"){
+    adenine_count1 <- adenine_count1 + 1
+  }
+  if(str_sub(vib_c, start = i, end = i) == "C"){
+    cytosine_count1 <- cytosine_count1 + 1
+  }
+  if(str_sub(vib_c, start = i, end = i) == "G"){
+    guanine_count1 <- guanine_count1 + 1
+  }
+  if(str_sub(vib_c, start = i, end = i) == "T"){
+    thymine_count1 <- thymine_count1 + 1
+  }
+}
+
+print(c(adenine_count1, cytosine_count1, guanine_count1, thymine_count1))
+```
+
+### Challenge 10
+
+Create account on rosalind.info and sample another dataset genome string, and use your code to count the number of each nucleotide.
+
+```{r}
+
+vib_c <- scan("C:/Users/soghi/Downloads/rosalind_dna (1).txt", what = "character", sep = NULL)
+
+vib_c 
+adenine_count2 <-0
+cytosine_count2 <-0
+guanine_count2 <-0
+thymine_count2 <-0
+
+#nchar = number of characters
+
+for(i in 1:nchar(vib_c)){
+  if(str_sub(vib_c, start = i, end = i) == "A"){
+    adenine_count2 <- adenine_count2 + 1
+  }
+  if(str_sub(vib_c, start = i, end = i) == "C"){
+    cytosine_count2 <- cytosine_count2 + 1
+  }
+  if(str_sub(vib_c, start = i, end = i) == "G"){
+    guanine_count2 <- guanine_count2 + 1
+  }
+  if(str_sub(vib_c, start = i, end = i) == "T"){
+    thymine_count2 <- thymine_count2 + 1
+  }
+}
+
+print(c(adenine_count2, cytosine_count2, guanine_count2, thymine_count2))
 ```
