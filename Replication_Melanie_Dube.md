@@ -8,6 +8,8 @@ execute:
 
 
 
+# Intro to Bioinformatics
+
 ## Introduction
 
 ### Activity Objectives
@@ -72,7 +74,7 @@ randGenome
 
 ::: {.cell-output .cell-output-stdout}
 ```
- [1] "C" "A" "C" "C" "G" "C" "G" "T" "C" "G" "A" "A" "A" "T" "T"
+ [1] "A" "C" "C" "A" "T" "G" "C" "T" "T" "C" "A" "A" "G" "G" "C"
 ```
 :::
 :::
@@ -89,7 +91,7 @@ paste(randGenome, collapse = "")
 
 ::: {.cell-output .cell-output-stdout}
 ```
-[1] "CACCGCGTCGAAATT"
+[1] "ACCATGCTTCAAGGC"
 ```
 :::
 :::
@@ -114,90 +116,90 @@ randGenomeChal3
 
 ::: {.cell-output .cell-output-stdout}
 ```
-   [1] "T" "A" "G" "G" "T" "A" "T" "C" "G" "A" "C" "C" "T" "C" "G" "A" "G" "C"
-  [19] "T" "T" "C" "A" "A" "G" "T" "A" "G" "T" "T" "T" "C" "A" "A" "T" "T" "G"
-  [37] "T" "C" "G" "C" "C" "G" "G" "T" "C" "A" "A" "G" "G" "T" "T" "G" "C" "C"
-  [55] "T" "A" "A" "A" "T" "T" "A" "G" "T" "T" "A" "C" "C" "C" "G" "C" "C" "C"
-  [73] "A" "G" "C" "C" "T" "T" "A" "C" "T" "T" "G" "C" "T" "T" "T" "A" "C" "C"
-  [91] "C" "C" "C" "G" "A" "G" "G" "G" "T" "C" "A" "G" "G" "T" "A" "A" "A" "G"
- [109] "T" "G" "T" "T" "G" "C" "T" "G" "A" "C" "T" "A" "T" "G" "T" "G" "A" "T"
- [127] "C" "A" "C" "T" "G" "G" "G" "T" "A" "T" "A" "T" "A" "C" "T" "G" "C" "C"
- [145] "A" "G" "G" "G" "C" "A" "C" "A" "A" "A" "G" "G" "T" "T" "C" "C" "G" "A"
- [163] "C" "C" "A" "C" "G" "C" "A" "G" "G" "G" "T" "C" "A" "A" "A" "T" "C" "A"
- [181] "A" "T" "C" "T" "T" "T" "A" "A" "G" "G" "T" "G" "A" "C" "A" "C" "A" "A"
- [199] "A" "G" "G" "G" "G" "A" "T" "C" "T" "A" "C" "A" "G" "G" "G" "T" "T" "T"
- [217] "G" "T" "T" "A" "A" "C" "C" "G" "G" "G" "C" "T" "C" "A" "C" "A" "T" "G"
- [235] "T" "C" "T" "C" "G" "T" "C" "T" "C" "T" "T" "A" "A" "C" "C" "G" "A" "A"
- [253] "A" "C" "C" "C" "C" "A" "A" "A" "C" "A" "G" "T" "C" "G" "G" "G" "C" "G"
- [271] "A" "A" "C" "C" "C" "A" "A" "G" "T" "C" "A" "T" "C" "T" "G" "C" "C" "C"
- [289] "T" "A" "A" "C" "A" "A" "T" "T" "C" "T" "A" "G" "A" "G" "T" "T" "T" "A"
- [307] "A" "A" "T" "G" "G" "G" "C" "G" "A" "G" "C" "A" "A" "A" "T" "C" "G" "T"
- [325] "T" "C" "G" "T" "C" "G" "A" "A" "T" "C" "T" "A" "G" "C" "C" "G" "C" "G"
- [343] "T" "G" "A" "G" "A" "C" "A" "A" "A" "C" "C" "G" "T" "A" "C" "G" "G" "C"
- [361] "T" "A" "T" "A" "G" "A" "A" "G" "T" "T" "T" "A" "T" "T" "A" "T" "C" "C"
- [379] "G" "A" "G" "C" "A" "A" "C" "C" "C" "A" "C" "T" "C" "G" "T" "T" "G" "A"
- [397] "T" "T" "G" "G" "C" "T" "T" "C" "T" "C" "T" "G" "G" "T" "A" "T" "C" "A"
- [415] "T" "C" "A" "C" "T" "T" "G" "A" "A" "C" "C" "C" "A" "C" "A" "C" "A" "A"
- [433] "T" "A" "C" "C" "G" "C" "T" "T" "G" "T" "C" "A" "T" "T" "C" "G" "G" "G"
- [451] "C" "G" "A" "C" "G" "G" "T" "G" "C" "C" "G" "T" "T" "T" "G" "G" "C" "T"
- [469] "C" "G" "A" "T" "C" "T" "T" "C" "G" "C" "T" "T" "T" "C" "T" "C" "A" "G"
- [487] "G" "C" "T" "C" "T" "A" "T" "G" "C" "C" "A" "T" "G" "C" "T" "A" "T" "A"
- [505] "C" "A" "G" "G" "T" "A" "A" "G" "T" "C" "C" "A" "T" "A" "A" "G" "A" "T"
- [523] "C" "T" "G" "C" "C" "A" "A" "T" "C" "A" "C" "A" "T" "A" "G" "T" "C" "T"
- [541] "C" "T" "C" "G" "T" "A" "T" "C" "G" "G" "C" "A" "A" "A" "A" "T" "G" "G"
- [559] "A" "C" "G" "G" "C" "C" "A" "C" "G" "C" "G" "A" "T" "G" "C" "C" "G" "G"
- [577] "T" "C" "G" "G" "A" "A" "A" "G" "C" "G" "T" "C" "T" "A" "G" "T" "A" "C"
- [595] "T" "C" "T" "G" "T" "G" "G" "C" "C" "C" "A" "C" "G" "G" "C" "A" "T" "T"
- [613] "G" "A" "T" "C" "G" "C" "T" "A" "G" "T" "T" "C" "G" "C" "T" "C" "T" "G"
- [631] "C" "A" "C" "G" "T" "T" "A" "G" "A" "A" "A" "C" "A" "C" "T" "G" "G" "C"
- [649] "T" "T" "A" "C" "G" "T" "T" "C" "A" "T" "G" "T" "C" "G" "G" "C" "C" "T"
- [667] "A" "A" "T" "A" "G" "T" "T" "A" "G" "C" "T" "A" "A" "A" "G" "A" "G" "G"
- [685] "C" "A" "C" "G" "A" "A" "A" "T" "T" "T" "T" "G" "C" "A" "G" "T" "C" "A"
- [703] "T" "A" "C" "G" "A" "A" "A" "A" "A" "G" "C" "C" "A" "T" "C" "G" "A" "T"
- [721] "A" "T" "T" "T" "G" "A" "A" "G" "C" "C" "C" "A" "C" "C" "T" "T" "T" "C"
- [739] "C" "C" "C" "T" "C" "T" "C" "A" "C" "T" "A" "C" "A" "C" "A" "A" "G" "A"
- [757] "G" "T" "A" "A" "G" "C" "G" "C" "C" "A" "G" "C" "G" "C" "A" "C" "G" "C"
- [775] "G" "G" "G" "G" "G" "A" "T" "A" "T" "T" "C" "C" "A" "G" "C" "A" "C" "C"
- [793] "A" "A" "A" "A" "G" "C" "G" "C" "A" "A" "T" "G" "T" "G" "T" "C" "A" "T"
- [811] "T" "T" "G" "A" "G" "C" "G" "A" "T" "A" "T" "G" "G" "G" "A" "G" "C" "C"
- [829] "G" "A" "G" "G" "C" "A" "A" "G" "A" "T" "T" "A" "G" "C" "T" "T" "G" "T"
- [847] "T" "A" "G" "C" "A" "G" "A" "T" "A" "G" "A" "A" "T" "A" "A" "C" "A" "G"
- [865] "A" "A" "T" "T" "C" "A" "C" "C" "A" "C" "C" "T" "G" "T" "C" "A" "G" "T"
- [883] "C" "C" "A" "G" "G" "A" "C" "T" "T" "C" "G" "A" "G" "T" "T" "A" "A" "G"
- [901] "C" "T" "G" "G" "A" "G" "C" "A" "A" "T" "A" "C" "G" "T" "G" "A" "A" "G"
- [919] "T" "C" "C" "C" "T" "T" "A" "G" "A" "T" "A" "T" "C" "C" "A" "A" "A" "G"
- [937] "A" "A" "T" "G" "G" "A" "C" "A" "T" "T" "G" "A" "A" "C" "C" "T" "C" "C"
- [955] "A" "C" "C" "G" "G" "A" "T" "C" "T" "C" "A" "A" "A" "C" "C" "T" "A" "C"
- [973] "T" "G" "A" "C" "T" "G" "C" "C" "T" "G" "C" "A" "T" "A" "C" "G" "C" "G"
- [991] "G" "C" "T" "A" "C" "C" "C" "C" "T" "A" "G" "G" "A" "T" "A" "T" "G" "T"
-[1009] "G" "A" "T" "A" "C" "A" "T" "C" "C" "A" "G" "C" "T" "A" "G" "A" "A" "C"
-[1027] "T" "A" "T" "G" "C" "T" "A" "T" "C" "C" "C" "C" "C" "C" "C" "G" "A" "G"
-[1045] "C" "A" "A" "T" "G" "G" "A" "C" "A" "G" "A" "C" "T" "A" "C" "C" "G" "C"
-[1063] "G" "C" "C" "C" "G" "C" "G" "G" "G" "T" "G" "T" "G" "C" "A" "C" "T" "T"
-[1081] "G" "T" "T" "T" "T" "G" "C" "T" "C" "G" "A" "A" "A" "C" "C" "C" "C" "T"
-[1099] "G" "G" "T" "T" "A" "G" "A" "A" "C" "G" "G" "A" "A" "A" "T" "A" "A" "A"
-[1117] "C" "T" "A" "T" "G" "A" "G" "G" "A" "T" "A" "C" "A" "G" "G" "T" "C" "C"
-[1135] "A" "T" "G" "T" "T" "G" "T" "C" "T" "A" "C" "G" "T" "A" "A" "A" "T" "A"
-[1153] "T" "A" "A" "T" "C" "A" "C" "T" "A" "T" "T" "T" "A" "T" "A" "T" "A" "T"
-[1171] "A" "G" "G" "T" "C" "G" "T" "T" "G" "T" "A" "T" "A" "T" "C" "A" "G" "G"
-[1189] "G" "T" "A" "G" "G" "C" "C" "A" "G" "G" "G" "A" "T" "A" "A" "G" "A" "T"
-[1207] "G" "A" "C" "C" "A" "G" "G" "G" "A" "G" "T" "G" "T" "A" "A" "G" "T" "A"
-[1225] "A" "C" "A" "G" "G" "A" "A" "A" "A" "C" "A" "G" "G" "A" "A" "A" "G" "G"
-[1243] "T" "T" "G" "A" "A" "T" "C" "C" "C" "T" "T" "A" "T" "A" "C" "A" "T" "G"
-[1261] "C" "T" "G" "A" "G" "G" "C" "T" "G" "T" "T" "A" "A" "C" "G" "C" "A" "G"
-[1279] "C" "G" "A" "G" "C" "A" "G" "C" "T" "C" "C" "G" "T" "G" "A" "G" "A" "T"
-[1297] "T" "A" "G" "G" "T" "A" "A" "A" "C" "A" "C" "T" "C" "C" "A" "T" "G" "G"
-[1315] "T" "G" "A" "A" "C" "C" "G" "G" "C" "A" "G" "G" "T" "C" "T" "T" "G" "T"
-[1333] "A" "A" "C" "A" "G" "A" "T" "A" "C" "C" "G" "A" "T" "C" "T" "G" "T" "T"
-[1351] "G" "T" "T" "A" "C" "T" "T" "A" "A" "C" "T" "C" "A" "G" "T" "G" "G" "T"
-[1369] "C" "C" "C" "C" "A" "G" "A" "C" "C" "G" "C" "A" "A" "C" "G" "T" "G" "T"
-[1387] "G" "A" "G" "A" "G" "C" "T" "C" "A" "T" "A" "G" "C" "C" "A" "G" "A" "G"
-[1405] "A" "G" "C" "T" "C" "T" "A" "C" "G" "C" "T" "T" "C" "A" "C" "C" "T" "C"
-[1423] "G" "G" "A" "G" "G" "C" "C" "A" "C" "C" "A" "T" "C" "T" "A" "A" "G" "A"
-[1441] "G" "T" "A" "C" "C" "C" "C" "C" "T" "G" "T" "T" "A" "T" "T" "T" "T" "G"
-[1459] "C" "C" "C" "G" "G" "T" "G" "G" "A" "A" "C" "T" "T" "G" "G" "A" "G" "G"
-[1477] "A" "G" "A" "A" "T" "C" "T" "T" "A" "A" "T" "G" "C" "A" "C" "A" "C" "A"
-[1495] "T" "C" "C" "T" "C" "C"
+   [1] "T" "G" "C" "G" "G" "G" "G" "C" "T" "C" "A" "G" "A" "A" "C" "A" "G" "G"
+  [19] "C" "T" "G" "G" "G" "T" "G" "C" "A" "C" "A" "G" "C" "C" "T" "T" "C" "T"
+  [37] "G" "T" "G" "C" "C" "C" "C" "G" "C" "C" "G" "C" "T" "T" "C" "G" "C" "G"
+  [55] "C" "G" "T" "T" "C" "A" "C" "C" "C" "T" "C" "T" "A" "A" "T" "C" "T" "G"
+  [73] "C" "A" "T" "C" "C" "T" "A" "C" "G" "C" "A" "G" "T" "G" "C" "C" "A" "A"
+  [91] "C" "G" "C" "C" "C" "C" "C" "T" "T" "T" "C" "A" "T" "T" "T" "G" "C" "A"
+ [109] "G" "G" "A" "C" "C" "C" "C" "C" "G" "C" "T" "G" "A" "T" "A" "A" "C" "A"
+ [127] "C" "T" "T" "G" "C" "A" "A" "A" "A" "A" "A" "G" "T" "T" "G" "C" "C" "C"
+ [145] "T" "T" "C" "T" "A" "T" "T" "A" "A" "T" "G" "A" "T" "A" "G" "T" "A" "G"
+ [163] "G" "A" "A" "C" "T" "C" "G" "C" "G" "C" "A" "G" "C" "C" "C" "C" "G" "T"
+ [181] "C" "T" "G" "A" "C" "T" "G" "T" "G" "T" "C" "G" "T" "T" "C" "T" "T" "C"
+ [199] "A" "A" "T" "A" "A" "T" "C" "A" "G" "A" "T" "T" "T" "G" "C" "T" "G" "T"
+ [217] "C" "T" "T" "C" "C" "G" "C" "C" "C" "G" "A" "G" "A" "G" "A" "A" "T" "G"
+ [235] "A" "A" "T" "A" "C" "C" "G" "C" "G" "G" "A" "G" "T" "G" "A" "G" "G" "C"
+ [253] "A" "A" "A" "C" "G" "G" "T" "A" "G" "T" "C" "C" "A" "C" "A" "C" "T" "A"
+ [271] "C" "A" "G" "C" "C" "T" "C" "A" "T" "A" "T" "A" "T" "A" "T" "A" "G" "C"
+ [289] "T" "A" "C" "C" "G" "A" "C" "G" "A" "G" "A" "A" "A" "T" "T" "T" "A" "C"
+ [307] "G" "A" "A" "A" "G" "T" "T" "G" "T" "G" "A" "T" "G" "G" "A" "G" "G" "G"
+ [325] "A" "T" "C" "T" "G" "G" "A" "G" "A" "T" "A" "C" "C" "C" "T" "G" "G" "T"
+ [343] "A" "C" "A" "C" "C" "G" "G" "T" "A" "G" "T" "A" "A" "T" "A" "T" "G" "C"
+ [361] "A" "G" "G" "T" "G" "A" "T" "G" "G" "C" "G" "T" "G" "T" "A" "A" "C" "C"
+ [379] "T" "A" "T" "G" "T" "G" "A" "T" "T" "G" "C" "T" "C" "T" "C" "T" "G" "C"
+ [397] "T" "C" "G" "C" "T" "T" "T" "C" "C" "A" "T" "G" "A" "G" "C" "T" "C" "A"
+ [415] "G" "A" "C" "A" "C" "A" "T" "A" "G" "C" "A" "G" "A" "C" "T" "C" "C" "A"
+ [433] "G" "C" "T" "A" "A" "C" "T" "A" "G" "G" "G" "C" "A" "G" "A" "A" "G" "G"
+ [451] "A" "G" "G" "T" "G" "G" "A" "A" "A" "G" "T" "C" "G" "A" "A" "C" "T" "T"
+ [469] "T" "A" "G" "C" "A" "C" "G" "A" "T" "G" "C" "G" "A" "G" "A" "G" "T" "T"
+ [487] "C" "A" "C" "T" "C" "G" "A" "C" "A" "C" "T" "T" "T" "G" "G" "C" "A" "T"
+ [505] "G" "A" "C" "C" "G" "T" "T" "G" "T" "C" "A" "C" "C" "T" "G" "A" "C" "C"
+ [523] "T" "A" "C" "A" "C" "A" "G" "C" "T" "T" "G" "T" "C" "A" "A" "T" "G" "G"
+ [541] "A" "A" "T" "G" "T" "G" "C" "G" "A" "G" "G" "C" "T" "G" "G" "G" "A" "T"
+ [559] "C" "G" "T" "G" "T" "C" "C" "T" "A" "G" "A" "A" "C" "T" "A" "G" "T" "T"
+ [577] "C" "A" "C" "G" "G" "T" "A" "G" "A" "A" "A" "A" "C" "G" "T" "C" "T" "T"
+ [595] "G" "C" "G" "G" "C" "T" "T" "A" "A" "C" "G" "T" "A" "G" "C" "C" "G" "C"
+ [613] "T" "C" "T" "G" "G" "A" "G" "C" "G" "G" "A" "A" "C" "A" "C" "C" "G" "A"
+ [631] "G" "A" "G" "A" "T" "C" "A" "T" "C" "C" "G" "C" "A" "C" "G" "C" "C" "C"
+ [649] "C" "C" "G" "T" "T" "C" "C" "T" "C" "G" "A" "T" "G" "C" "A" "A" "A" "T"
+ [667] "A" "T" "C" "C" "T" "G" "G" "T" "C" "C" "C" "C" "A" "C" "G" "T" "C" "G"
+ [685] "C" "G" "A" "C" "G" "G" "G" "G" "G" "A" "G" "C" "C" "C" "G" "A" "G" "G"
+ [703] "G" "G" "A" "T" "A" "T" "T" "T" "A" "G" "T" "C" "G" "A" "A" "G" "G" "G"
+ [721] "A" "G" "G" "C" "G" "T" "G" "C" "A" "C" "C" "T" "A" "G" "C" "A" "C" "A"
+ [739] "T" "T" "T" "A" "G" "G" "G" "A" "A" "C" "G" "T" "C" "A" "G" "G" "C" "G"
+ [757] "C" "C" "C" "A" "C" "G" "G" "C" "C" "G" "C" "T" "G" "C" "G" "G" "T" "T"
+ [775] "A" "T" "C" "A" "A" "T" "C" "C" "C" "C" "T" "T" "A" "C" "G" "T" "C" "T"
+ [793] "T" "A" "T" "T" "G" "G" "T" "C" "G" "G" "G" "A" "G" "T" "A" "G" "C" "C"
+ [811] "G" "T" "A" "G" "T" "G" "A" "A" "A" "A" "T" "A" "C" "T" "T" "T" "G" "G"
+ [829] "A" "T" "A" "G" "T" "G" "G" "G" "A" "C" "T" "G" "A" "T" "G" "G" "A" "C"
+ [847] "T" "G" "C" "G" "A" "G" "T" "T" "C" "T" "A" "A" "A" "C" "A" "T" "C" "A"
+ [865] "A" "C" "T" "T" "C" "C" "C" "G" "G" "A" "A" "C" "G" "C" "C" "C" "A" "T"
+ [883] "G" "C" "C" "G" "A" "C" "C" "G" "A" "C" "T" "T" "G" "T" "C" "C" "G" "T"
+ [901] "T" "A" "G" "T" "G" "C" "A" "T" "G" "A" "C" "A" "T" "T" "C" "T" "C" "A"
+ [919] "T" "G" "T" "T" "C" "A" "A" "A" "A" "G" "A" "G" "T" "A" "A" "G" "A" "G"
+ [937] "A" "G" "T" "G" "G" "T" "C" "T" "C" "T" "A" "A" "C" "A" "T" "A" "T" "C"
+ [955] "A" "G" "C" "T" "A" "C" "A" "T" "G" "G" "G" "T" "G" "C" "A" "C" "G" "A"
+ [973] "C" "T" "C" "A" "G" "G" "C" "G" "G" "A" "A" "C" "G" "C" "C" "G" "G" "A"
+ [991] "T" "A" "A" "C" "A" "T" "C" "A" "C" "C" "T" "C" "T" "A" "A" "A" "A" "G"
+[1009] "A" "G" "C" "G" "C" "G" "G" "C" "A" "A" "G" "T" "A" "G" "C" "G" "C" "G"
+[1027] "G" "A" "C" "G" "T" "T" "A" "A" "G" "A" "C" "A" "A" "T" "C" "A" "T" "T"
+[1045] "T" "A" "A" "A" "A" "T" "C" "C" "C" "C" "G" "T" "T" "C" "T" "C" "T" "T"
+[1063] "G" "G" "T" "G" "T" "C" "G" "A" "T" "C" "T" "T" "G" "G" "A" "A" "T" "C"
+[1081] "A" "C" "G" "A" "A" "T" "T" "C" "G" "C" "T" "T" "G" "T" "G" "G" "T" "C"
+[1099] "G" "A" "G" "T" "C" "T" "G" "C" "G" "T" "A" "T" "C" "C" "A" "C" "A" "A"
+[1117] "A" "G" "G" "A" "T" "A" "A" "T" "T" "G" "G" "T" "G" "T" "A" "G" "G" "G"
+[1135] "G" "C" "C" "A" "G" "G" "C" "G" "C" "A" "T" "C" "T" "C" "T" "A" "C" "G"
+[1153] "G" "C" "G" "G" "C" "G" "T" "T" "G" "G" "T" "C" "G" "T" "G" "C" "T" "T"
+[1171] "T" "T" "C" "A" "C" "C" "T" "A" "G" "T" "T" "T" "G" "G" "C" "A" "G" "C"
+[1189] "G" "A" "T" "G" "A" "A" "T" "T" "A" "A" "T" "T" "C" "A" "T" "A" "A" "G"
+[1207] "T" "G" "T" "G" "G" "A" "A" "T" "C" "C" "G" "C" "G" "A" "T" "T" "G" "G"
+[1225] "T" "T" "C" "G" "A" "A" "C" "T" "C" "A" "G" "A" "C" "G" "C" "A" "T" "C"
+[1243] "T" "G" "T" "G" "G" "T" "T" "T" "T" "G" "T" "A" "A" "G" "C" "C" "A" "T"
+[1261] "A" "G" "A" "A" "A" "A" "T" "A" "C" "C" "C" "A" "C" "C" "C" "G" "T" "T"
+[1279] "C" "G" "T" "A" "G" "T" "T" "G" "G" "A" "G" "T" "C" "T" "C" "C" "C" "T"
+[1297] "C" "C" "T" "C" "C" "A" "A" "G" "C" "A" "C" "G" "G" "A" "C" "T" "T" "T"
+[1315] "A" "A" "C" "A" "G" "A" "T" "A" "G" "A" "C" "T" "G" "C" "C" "G" "A" "A"
+[1333] "T" "C" "T" "C" "G" "A" "G" "C" "T" "A" "G" "G" "T" "G" "C" "C" "C" "C"
+[1351] "C" "G" "G" "A" "T" "A" "G" "A" "G" "G" "A" "G" "G" "A" "C" "G" "G" "C"
+[1369] "T" "C" "A" "C" "A" "A" "C" "T" "A" "T" "G" "G" "G" "T" "A" "A" "C" "T"
+[1387] "T" "A" "G" "G" "C" "T" "A" "T" "G" "G" "A" "G" "T" "T" "A" "T" "T" "G"
+[1405] "G" "G" "G" "C" "G" "C" "T" "A" "T" "T" "G" "C" "G" "T" "C" "G" "A" "A"
+[1423] "A" "T" "G" "C" "C" "C" "A" "A" "G" "G" "A" "A" "C" "T" "G" "G" "A" "G"
+[1441] "G" "C" "T" "T" "T" "T" "T" "T" "G" "T" "T" "C" "A" "C" "A" "T" "T" "A"
+[1459] "G" "C" "A" "T" "C" "A" "T" "A" "G" "G" "T" "C" "T" "T" "C" "T" "T" "T"
+[1477] "C" "C" "A" "T" "C" "T" "T" "G" "A" "T" "C" "T" "T" "G" "T" "C" "A" "A"
+[1495] "C" "G" "C" "G" "C" "T"
 ```
 :::
 
@@ -207,7 +209,7 @@ paste(randGenomeChal3, collapse = "")
 
 ::: {.cell-output .cell-output-stdout}
 ```
-[1] "TAGGTATCGACCTCGAGCTTCAAGTAGTTTCAATTGTCGCCGGTCAAGGTTGCCTAAATTAGTTACCCGCCCAGCCTTACTTGCTTTACCCCCGAGGGTCAGGTAAAGTGTTGCTGACTATGTGATCACTGGGTATATACTGCCAGGGCACAAAGGTTCCGACCACGCAGGGTCAAATCAATCTTTAAGGTGACACAAAGGGGATCTACAGGGTTTGTTAACCGGGCTCACATGTCTCGTCTCTTAACCGAAACCCCAAACAGTCGGGCGAACCCAAGTCATCTGCCCTAACAATTCTAGAGTTTAAATGGGCGAGCAAATCGTTCGTCGAATCTAGCCGCGTGAGACAAACCGTACGGCTATAGAAGTTTATTATCCGAGCAACCCACTCGTTGATTGGCTTCTCTGGTATCATCACTTGAACCCACACAATACCGCTTGTCATTCGGGCGACGGTGCCGTTTGGCTCGATCTTCGCTTTCTCAGGCTCTATGCCATGCTATACAGGTAAGTCCATAAGATCTGCCAATCACATAGTCTCTCGTATCGGCAAAATGGACGGCCACGCGATGCCGGTCGGAAAGCGTCTAGTACTCTGTGGCCCACGGCATTGATCGCTAGTTCGCTCTGCACGTTAGAAACACTGGCTTACGTTCATGTCGGCCTAATAGTTAGCTAAAGAGGCACGAAATTTTGCAGTCATACGAAAAAGCCATCGATATTTGAAGCCCACCTTTCCCCTCTCACTACACAAGAGTAAGCGCCAGCGCACGCGGGGGATATTCCAGCACCAAAAGCGCAATGTGTCATTTGAGCGATATGGGAGCCGAGGCAAGATTAGCTTGTTAGCAGATAGAATAACAGAATTCACCACCTGTCAGTCCAGGACTTCGAGTTAAGCTGGAGCAATACGTGAAGTCCCTTAGATATCCAAAGAATGGACATTGAACCTCCACCGGATCTCAAACCTACTGACTGCCTGCATACGCGGCTACCCCTAGGATATGTGATACATCCAGCTAGAACTATGCTATCCCCCCCGAGCAATGGACAGACTACCGCGCCCGCGGGTGTGCACTTGTTTTGCTCGAAACCCCTGGTTAGAACGGAAATAAACTATGAGGATACAGGTCCATGTTGTCTACGTAAATATAATCACTATTTATATATAGGTCGTTGTATATCAGGGTAGGCCAGGGATAAGATGACCAGGGAGTGTAAGTAACAGGAAAACAGGAAAGGTTGAATCCCTTATACATGCTGAGGCTGTTAACGCAGCGAGCAGCTCCGTGAGATTAGGTAAACACTCCATGGTGAACCGGCAGGTCTTGTAACAGATACCGATCTGTTGTTACTTAACTCAGTGGTCCCCAGACCGCAACGTGTGAGAGCTCATAGCCAGAGAGCTCTACGCTTCACCTCGGAGGCCACCATCTAAGAGTACCCCCTGTTATTTTGCCCGGTGGAACTTGGAGGAGAATCTTAATGCACACATCCTCC"
+[1] "TGCGGGGCTCAGAACAGGCTGGGTGCACAGCCTTCTGTGCCCCGCCGCTTCGCGCGTTCACCCTCTAATCTGCATCCTACGCAGTGCCAACGCCCCCTTTCATTTGCAGGACCCCCGCTGATAACACTTGCAAAAAAGTTGCCCTTCTATTAATGATAGTAGGAACTCGCGCAGCCCCGTCTGACTGTGTCGTTCTTCAATAATCAGATTTGCTGTCTTCCGCCCGAGAGAATGAATACCGCGGAGTGAGGCAAACGGTAGTCCACACTACAGCCTCATATATATAGCTACCGACGAGAAATTTACGAAAGTTGTGATGGAGGGATCTGGAGATACCCTGGTACACCGGTAGTAATATGCAGGTGATGGCGTGTAACCTATGTGATTGCTCTCTGCTCGCTTTCCATGAGCTCAGACACATAGCAGACTCCAGCTAACTAGGGCAGAAGGAGGTGGAAAGTCGAACTTTAGCACGATGCGAGAGTTCACTCGACACTTTGGCATGACCGTTGTCACCTGACCTACACAGCTTGTCAATGGAATGTGCGAGGCTGGGATCGTGTCCTAGAACTAGTTCACGGTAGAAAACGTCTTGCGGCTTAACGTAGCCGCTCTGGAGCGGAACACCGAGAGATCATCCGCACGCCCCCGTTCCTCGATGCAAATATCCTGGTCCCCACGTCGCGACGGGGGAGCCCGAGGGGATATTTAGTCGAAGGGAGGCGTGCACCTAGCACATTTAGGGAACGTCAGGCGCCCACGGCCGCTGCGGTTATCAATCCCCTTACGTCTTATTGGTCGGGAGTAGCCGTAGTGAAAATACTTTGGATAGTGGGACTGATGGACTGCGAGTTCTAAACATCAACTTCCCGGAACGCCCATGCCGACCGACTTGTCCGTTAGTGCATGACATTCTCATGTTCAAAAGAGTAAGAGAGTGGTCTCTAACATATCAGCTACATGGGTGCACGACTCAGGCGGAACGCCGGATAACATCACCTCTAAAAGAGCGCGGCAAGTAGCGCGGACGTTAAGACAATCATTTAAAATCCCCGTTCTCTTGGTGTCGATCTTGGAATCACGAATTCGCTTGTGGTCGAGTCTGCGTATCCACAAAGGATAATTGGTGTAGGGGCCAGGCGCATCTCTACGGCGGCGTTGGTCGTGCTTTTCACCTAGTTTGGCAGCGATGAATTAATTCATAAGTGTGGAATCCGCGATTGGTTCGAACTCAGACGCATCTGTGGTTTTGTAAGCCATAGAAAATACCCACCCGTTCGTAGTTGGAGTCTCCCTCCTCCAAGCACGGACTTTAACAGATAGACTGCCGAATCTCGAGCTAGGTGCCCCCGGATAGAGGAGGACGGCTCACAACTATGGGTAACTTAGGCTATGGAGTTATTGGGGCGCTATTGCGTCGAAATGCCCAAGGAACTGGAGGCTTTTTTGTTCACATTAGCATCATAGGTCTTCTTTCCATCTTGATCTTGTCAACGCGCT"
 ```
 :::
 :::
@@ -918,7 +920,35 @@ print(Adenine_count)
 
 After submitting the answer to Rosalind, I was able to verify that these were the correct totals for each nucleotide for this data set.
 
+# Replication Origin: Part I
+
+## Intro: Functions
+
+This is a function which takes in two arguments, a string (`genomeString`) and a `nucleotide`. The result of the function is the frequency of the `nucleotide` within the `genomeString`.
+
 
 ::: {.cell}
 
+```{.r .cell-code}
+nucleotide_frequency <- function(genomeString, nucleotide = "A"){
+  count <- 0
+  for(i in 1:nchar(genomeString)){
+    if(str_sub(genomeString, start = i, end = i) == nucleotide){
+      count <- count + 1
+    }
+  }
+  return(count)
+}
+
+nucleotide_frequency("ACTTGCGGGTATCGAG", "G")
+```
+
+::: {.cell-output .cell-output-stdout}
+```
+[1] 6
+```
 :::
+:::
+
+
+This shows that there are 6 `guanine` in this string of nucleotides.

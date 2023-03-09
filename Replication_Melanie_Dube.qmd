@@ -6,6 +6,8 @@ execute:
   keep-md: true
 ---
 
+# Intro to Bioinformatics
+
 ## Introduction
 
 ### Activity Objectives
@@ -375,6 +377,24 @@ print(Adenine_count)
 
 After submitting the answer to Rosalind, I was able to verify that these were the correct totals for each nucleotide for this data set.
 
-```{r}
+# Replication Origin: Part I
 
+## Intro: Functions
+
+This is a function which takes in two arguments, a string (`genomeString`) and a `nucleotide`. The result of the function is the frequency of the `nucleotide` within the `genomeString`.
+
+```{r}
+nucleotide_frequency <- function(genomeString, nucleotide = "A"){
+  count <- 0
+  for(i in 1:nchar(genomeString)){
+    if(str_sub(genomeString, start = i, end = i) == nucleotide){
+      count <- count + 1
+    }
+  }
+  return(count)
+}
+
+nucleotide_frequency("ACTTGCGGGTATCGAG", "G")
 ```
+
+This shows that there are 6 `guanine` in this string of nucleotides.
