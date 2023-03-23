@@ -232,7 +232,9 @@ Count the frequency of each nucleotide in the *Vibrio Cholerae* chromosome.
 
 vib_c <- scan("C:/Users/soghi/OneDrive/Desktop/nucleotide.txt", what = "character", sep = NULL)
 
-vib_c 
+#vib_c below hashtagged out for now!!!! important
+
+#vib_c 
 adenine_count1 <-0
 cytosine_count1 <-0
 guanine_count1 <-0
@@ -297,7 +299,96 @@ print(c(adenine_count2, cytosine_count2, guanine_count2, thymine_count2))
 
 # Finding the Replication Origin, Part 1
 
+
+```{r}
+
+nucleotide_frequency <- function(genomeString, nucleotide = "A"){
+  count <- 0
+  for(i in 1:nchar(genomeString)){
+    if(str_sub(genomeString, start = i, end = i) == nucleotide){
+      count <- count + 1
+    }
+  }
+  return(count)
+}
+
+nucleotide_frequency("ACTTGCGGGTATCGAG", "G")
+```
+
+
 ### Challenge 1
 
-Generate a random genome at least 2000 nucleotides long using sample() and paste(..., collapse= "") function. Count the frequency of c
+Generate a random genome at least 2000 nucleotides in length using sample() and paste(..., collapse= "") function. Count the number of Cytosine.
+
+
+```{r}
+
+nt_sample <- sample(nucleotides, size = 2000, replace = TRUE)
+nt_sample <- paste(nt_sample, collapse = "")
+
+nucleotide_frequency(nt_sample, "C")
+```
+
+
+### Challenge 2
+
+Build function `rand_genome()` which takes a single parameter `k`, denoting the number of nucleotides in the genome (challenge 1 but different code to do it -- easier).
+
+
+```{r}
+
+rand_genome <- function(k){
+  rand_genome <- sample(nucleotides, size = genomeLength, replace = TRUE)
+  
+  rand_genome <- paste(randGenome, collapse = "")
+  return(randGenome)
+}
+
+rand_genome(10)
+```
+
+
+### Challenge 3
+
+Build a function called `generate_3_mers()` to generate all of the substrings of 3 nucleotides in a genome string. Construct random genome 15 nucleoteotides and use new function to compute list of all 3-mers in genome.
+
+
+```{r}
+
+myString <- rand_genome(15)
+generate_3_mers <- function(myString) {
+  list_3_mers <- c()
+  
+  for(i in 1:(nchar(myString) - 2)){
+    list_3_mers <- list_3_mers %>%
+    append(str_sub(myString, start = i, end = i + 2))
+  }
+    return(list_3_mers)  
+}
+
+myString
+generate_3_mers(myString)
+```
+
+
+### Challenge 4
+
+Update `generate_3_mers()` function so it's able to generate k-mers of any length (greater than 0 and less than the size of the genome we begin with). Function uses 2 parameters -- `genomeString` and `k`, where `k` controls the \# of nucleotides in each `k`-mer.
+
+
+```{r}
+
+generate_k_mer <- function(string, k = 3){
+  list_codon <- c()
+  
+  for (i in seq(1, nchar(string) - k + 1, by = k)) {
+    list_codon <- list_codon %>%
+      append(str_sub(string, start = i, end = i + k -1))
+  }
+  
+  return(list_codon)
+}
+
+generate_k_mer(rand_genome(9))
+```
 
