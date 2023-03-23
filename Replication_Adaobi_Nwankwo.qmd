@@ -313,6 +313,8 @@ print(Guanine_count)
 
 ## The Search for the Replication Origin
 
+The function below takes in two arguments, a string and a nucleotide. The result is the frequency of the nucleotide within the genome string. Then a function will be used to count the frequency of Guanine in a particular string of nucleotides. After running this code, the frequency of Guanine is this string of nucleotides is 6.
+
 ```{r}
 nucleotide_frequency <- function(genomeString, nucleotide = "A"){
   count <- 0
@@ -329,6 +331,8 @@ nucleotide_frequency("ACTTGCGGGTATCGAG", "G")
 
 ## Challenge 1
 
+This challenge involves generating a random genome length of 2000. To do this, the sample() function and collapse function will be utilized. The nucleotide frequency function will be used to count the frequency of Cytosine in the random genome. The frequency of Cytosine in a sample of 2000 is being counted in this case.
+
 ```{r}
 nt_sample <- sample(nucleotides, size = 2000, replace = TRUE)
 nt_sample <- paste(nt_sample, collapse = "")
@@ -338,9 +342,11 @@ nucleotide_frequency(nt_sample, "C")
 
 ## Challenge 2
 
+In this challenge, k denotes the number of nucleotides Using the parameter k is a lot simpler than typing out a whole function representing the number of nucleotides. The function returns a single genome string of length K.
+
 ```{r}
 rand_genome <- function(k){
- randGenome <- sample(nucleotides, size = genomeLength, replace = TRUE)
+ randGenome <- sample(nucleotides, size = k, replace = TRUE)
 
   randGenome <- paste(randGenome, collapse = "")
   return(randGenome)
@@ -350,3 +356,55 @@ rand_genome(10)
 ```
 
 ## Challenge 3
+
+In this challenge, a function called generate_3\_mars which will generate all of the substrings of 3 nucletoides in a genome string. This function will return a list containing all of the 3-mers in genomestring. Then, the rand genome function is used to gnerate a random genome length of 2000 nucleotides. Lastly, a list was computed of all the 3-mers in your random genome. To ensure, the code is working properly, I used a smaller nucleeotide length of 10 which was helpful to see what was actually happening within the code.
+
+```{r}
+myString <-rand_genome(2000)
+generate_3_mers <- function(myString) {
+  list_3_mers <- c()
+    
+    for(i in 1:(nchar(myString) - 2)){
+      list_3_mers <- list_3_mers %>%
+      append(str_sub(myString, start = i, end = i + 2))
+    }
+    return(list_3_mers)
+}
+myString
+generate_3_mers(myString)
+
+```
+
+## Challenge 4
+
+In this challenge, we create a function called generate_k\_mers. K controls the number of nucleotides in each k-mer.
+
+```{r}
+generate_k_mer <- function(string, k = 3) {
+  list_codon <- c()
+  
+  for(i in seq(1, nchar(string) - k + 1, by = k)) {
+    list_codon <- list_codon %>%
+      append(str_sub(string, start = i, end = i + k - 1))
+  }
+  return(list_codon)
+}
+generate_k_mer(rand_genome(9))
+
+```
+
+```{r}
+myString <-rand_genome(15)
+generate_3_mers <- function(myString) {
+  list_3_mers <- c()
+  
+  for(i in 1:(nchar(myString) - 2)){
+  list_3_mers <- list_3_mers %>%
+    append(str_sub(myString, start = i, end = i + 2))
+  }
+  return(list_3_mers)
+}
+myString
+generate_3_mers(myString)
+
+```
