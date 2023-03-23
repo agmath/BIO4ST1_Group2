@@ -398,3 +398,69 @@ nucleotide_frequency("ACTTGCGGGTATCGAG", "G")
 ```
 
 This shows that there are 6 `guanine` in this string of nucleotides.
+
+## Challenge 1
+
+The first challenge for this section is to use the `sample()` function to create a random genome at least 2000 in length. Then, we must count the frequency of Cytosine.
+
+```{r}
+nt_sample <- sample(nucleotides, size = 2000, replace = TRUE)
+nt_sample <- paste(nt_sample, collapse = "")
+
+nucleotide_frequency(nt_sample, "C")
+
+```
+
+## Challenge 2
+
+In this challenge we must build a new function, `rand_genome()`, which uses the parameter `k` to determine how many nucleotides we want to generate in the genome.
+
+```{r}
+rand_genome <- function(k){
+  randGenome <- sample(nucleotides, size = k, replace = TRUE)
+  
+  randGenome <- paste(randGenome, collapse = "")
+  return(randGenome)
+}
+
+rand_genome(10)
+```
+
+## Challenge 3
+
+In this challenge we a building a new function called `generate_3_mers()` to generate all the substrings of 3 nucleotides. Next, we want to use the `rand-genome()` function to construct a random genome of 2000 nucleotides in length, then use the `generate_3_mers()` to compute all the 3-mers in the random genome.
+
+```{r}
+myString <- rand_genome(10)
+generate_3_mers <- function(myString) {
+  list_3_mers <- c()
+  
+  for(i in 1:(nchar(myString) - 2)){
+  list_3_mers <- list_3_mers %>%
+  append(str_sub(myString, start = i, end = i + 2))
+    }
+  return(list_3_mers)
+}
+myString
+generate_3_mers(myString)
+
+
+```
+
+## Challenge 4
+
+For this challenge, we will create a new, updated version of the `generate_3_mers()` function so that it can generate k-mers of any length (must be less than the size of the original `genomeString`).
+
+```{r}
+generate_k_mers <- function(string, k = 3) {
+  list_codon <- c()
+  
+  for (i in seq(1, nchar(string) - k + 1, by = k)) {
+    list_codon <- list_codon %>%
+      append(str_sub(string, start = i, end = i + k - 1))
+  }
+  return(list_codon)
+}
+
+generate_k_mers(rand_genome(9))
+```
