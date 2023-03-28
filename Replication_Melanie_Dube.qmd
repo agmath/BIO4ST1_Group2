@@ -464,3 +464,59 @@ generate_k_mers <- function(string, k = 3) {
 
 generate_k_mers(rand_genome(9))
 ```
+
+## Challenge 5
+
+The last challenge is to create a new function which will count the number of occurrences of a particular pattern within the larger genome string.
+
+```{r}
+nt_patterns <- function(string, pattern){
+  nt_matches <- 0
+  for(i in 1:nchar(string)){
+    if(str_sub(string, i, i + str_length(pattern)-1) == pattern){
+      nt_matches = nt_matches + 1
+    }
+  }
+  return(nt_matches)
+}
+  
+nt_patterns(rand_genome(2000), "CTG")
+```
+
+This code successfully creates a random genome, and then counts the number of specified kmers which are identified in quotes.
+
+### Part 2
+
+This part of the challenge uses data from rosalind to count the number of identified kmers. The rosalind data is loaded below.
+
+```{r}
+rosalind_string <- "TTAGTCCCCAGTCCCCAGTCCCCTCCAGTCCCCGCAGTCCCCCAGTCCCCAGTCCCCCAGTCCCCAGTCCCCAGTCCCCAGCCAGTCCCCACCGGTGTGGTAGTCCCCCAAGTCCCCAAGTCCCCAGTGATAACAGTCCCCTTCTCTAAGTCCCCAGTCCCCGAGTCCCCAGTTGAGTCCCCCTAGTCCCCGCCTATAGTCCCCCCACGAGTCCCCTGAAGTCCCCTGAAAGTCCCCCTGACGCAAGTCCCCTAGTCCCCCAGTCCCCAGAAGTCCCCCAGTCCCCTAAGTCCCCTAGAGTCCCCAGTCCCCGAGAGTCCCCTGTAAGTCCCCCTCAGTCCCCGGCTCGAGTCCCCGATGAGTCCCCGAGTCCCCCCGAGTCCCCGGTTAGTCCCCAAGTCCCCGAGTCCCCGAGTCCCCTGAAGTCCCCGAGTCCCCTCGAGTCCCCAGTCCCCGCTAGTCCCCCTTAGTCCCCAGTCCCCGAGTCCCCAGTCCCCAGTCCCCAAGTCCCCCGTGGAGAAGTCCCCGCAGTCCCCAGTCCCCTCGATTAGTCCCCATGCGATAGTCCCCCAGTCCCCTGAGTCCCCAGTCCCCAAGTCCCCGTTAGTCCCCGAGTCCCCAAAATTAGTCCCCGAAGTCCCCCCGTAGTCCCCTGTGAGTCCCCGAGTCCCCAGTCCCCTTACGAGTCCCCGTCCAGTCCCCTGATTATATGAGAGTCCCCTTGGAGTCCCCTAGTCCCCTAAGTCCCCAGAGTGATTCTTAGTCCCCAAGTCCCCAGTCCCCGCTAGTCCCCATAGTCCCCAGTCCCCCGCAGTCCCCCTACCTCAGTCCCCAAGTCCCCCAGTCCCCCAGTCCCCGGTATTAGTCCCCGAAGTCCCCGAGTCCCCATACTCAAGTCCCCCAGTCCCCGGATGGTAGAGTCCCCAGTCCCCTAGTCCCCCCGAGTCCCCAGTCCCCCAGTCCCCACGGCGGCTAAAGTCCCCTAGTCCCCAGTCCCCGATGCAGTCCCCAAGTCCCCAGTCCCC"
+```
+
+This section uses the command created above to count the number of `AGTCCCCAG` in the code, which is appears to be 25.
+
+```{r}
+nt_patterns(rosalind_string, "AGTCCCCAG")
+```
+
+# Replication Origin: Part 2
+
+## Challenge 1
+
+The first challenge is to count the number of frequent words in a string.
+
+```{r}
+find_frequent_kmers <- function(genome, k){
+  kmers <- generate_k_mers(genome, k)
+  kmers <- unique(kmers)
+  kmer_counts <- rep(0, length(kmers))
+  for(i in 1: length(kmers)){
+    kmer_counts[i]<- count_pattern(genome, kmers[i])
+  }
+max_freq <- max(kmer_counts)
+freq_kmers <- kmers[kmer_counts==max_freq]
+return(freq_kmers)
+}
+```
+
+need help on this function, genome function is not found??
