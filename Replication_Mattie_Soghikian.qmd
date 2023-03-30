@@ -359,3 +359,65 @@ generate_k_mer <- function(string, k = 3){
 
 generate_k_mer(rand_genome(9))
 ```
+
+### Challenge 5
+
+Create a function counting the number of occurences of a pattern in a larger genome.
+
+```{r}
+
+count_pattern <- function(string, pattern){
+  nt_matches <- 0
+  for(i in 1:nchar(string)){
+    if(str_sub(string, i, i + str_length(pattern)-1) == pattern){
+      nt_matches = nt_matches + 1
+    }
+  }
+  return(nt_matches)
+}
+
+count_pattern(rand_genome(2000), "CTG")
+count_pattern("CGTAACTCGT", "CGT")
+```
+
+# Finding the Replication Origin, Part 2
+
+### Challenge 1
+
+Create `find_frequent_kmers` to count occurences in genome string.
+
+```{r}
+
+find_frequent_kmers <- function(genome,k){
+  
+  #get the kmers
+  
+  kmers <- generate_k_mer(genome,k)
+  kmers <- unique(kmers)
+  
+  #count occurences
+  
+  kmer_counts <- rep(0, length(kmers))
+  
+  for(i in 1:length(kmers)){
+    kmer_counts[i] <-count_pattern(genome, kmers[i]  )
+  }
+  #largest count
+  max_freq <- max(kmer_counts)
+  freq_kmers <- kmers[kmer_counts==max_freq]
+  
+  return(freq_kmers)
+
+}
+```
+
+Find the most frequent repeat (3 nucleotides in length) in a string.
+
+```{r}
+
+mygenome <-rand_genome(10)
+find_frequent_kmers(mygenome, 2)
+find_frequent_kmers("AAATAAG", 3)
+```
+
+### Challenge 2
