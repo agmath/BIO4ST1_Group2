@@ -470,7 +470,7 @@ generate_k_mers(rand_genome(9))
 The last challenge is to create a new function which will count the number of occurrences of a particular pattern within the larger genome string.
 
 ```{r}
-nt_patterns <- function(string, pattern){
+count_pattern <- function(string, pattern){
   nt_matches <- 0
   for(i in 1:nchar(string)){
     if(str_sub(string, i, i + str_length(pattern)-1) == pattern){
@@ -480,7 +480,8 @@ nt_patterns <- function(string, pattern){
   return(nt_matches)
 }
   
-nt_patterns(rand_genome(2000), "CTG")
+count_pattern(rand_genome(2000), "CTG")
+count_pattern("CGTAACTCGT", "CGT")
 ```
 
 This code successfully creates a random genome, and then counts the number of specified kmers which are identified in quotes.
@@ -496,7 +497,7 @@ rosalind_string <- "TTAGTCCCCAGTCCCCAGTCCCCTCCAGTCCCCGCAGTCCCCCAGTCCCCAGTCCCCCAG
 This section uses the command created above to count the number of `AGTCCCCAG` in the code, which is appears to be 25.
 
 ```{r}
-nt_patterns(rosalind_string, "AGTCCCCAG")
+count_pattern(rosalind_string, "AGTCCCCAG")
 ```
 
 # Replication Origin: Part 2
@@ -514,9 +515,42 @@ find_frequent_kmers <- function(genome, k){
     kmer_counts[i]<- count_pattern(genome, kmers[i])
   }
 max_freq <- max(kmer_counts)
+print(max_freq)
 freq_kmers <- kmers[kmer_counts==max_freq]
 return(freq_kmers)
 }
 ```
 
-need help on this function, genome function is not found??
+```{r}
+myGenome <- rand_genome(10)
+find_frequent_kmers(myGenome, 2)
+find_frequent_kmers("AAATAAAG", 3)
+```
+
+Next, we want to try to run the function we created with the data from Rosalind.
+
+This is testing the function with the sample data from Rosalind.
+
+```{r}
+find_frequent_kmers("ACGTTGCATGTCGCATGATGCATGAGAGCT", 4)
+```
+
+This is the
+
+## Challenge 2
+
+This is where we begin to think about generating the reverse complement of each of the nucleotides. Below we are building the function for the `reverse_complement`.
+
+```{r}
+reverse_complement <- function(genomeSubString){
+  complement = c('A' = 'T', 'C' = 'G', 'T' = 'A', 'G' = 'C')
+  reverse_complement <- ''
+  for (nucleotide in rev(strsplit(genomeSubString, "") [[1]])){
+    reverse_complement <- paste(reverse_complement, complement[nucleotide], sep = "")
+  }
+  return(reverse_complement)
+}
+reverse_complement("ATTG")
+```
+
+The key to the reverse complement function is defining what we want to see when a certain nucleotide is presented (ex: A = T). This function defines that and successfully reports the reverse complement for each given nucleotide.
