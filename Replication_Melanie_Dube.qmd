@@ -554,3 +554,5 @@ reverse_complement("ATTG")
 ```
 
 The key to the reverse complement function is defining what we want to see when a certain nucleotide is presented (ex: A = T). This function defines that and successfully reports the reverse complement for each given nucleotide.
+
+# Replication Origin: Part 3
