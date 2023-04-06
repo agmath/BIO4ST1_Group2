@@ -158,13 +158,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>randGenome</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] "C" "A" "T" "A" "G" "C" "A" "G" "G" "G" "T" "C" "C" "T" "T"</code></pre>
+<pre><code> [1] "G" "C" "G" "C" "G" "T" "C" "G" "C" "T" "A" "A" "C" "G" "T"</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Collapse genome into single string</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">paste</span>(randGenome, <span class="at">collapse =</span> <span class="st">""</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "CATAGCAGGGTCCTT"</code></pre>
+<pre><code>[1] "GCGCGTCGCTAACGT"</code></pre>
 </div>
 </div>
 </section>
@@ -687,6 +687,28 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </section>
 <section id="challenge-2-2" class="level3">
 <h3 class="anchored" data-anchor-id="challenge-2-2">Challenge 2</h3>
+<p>Input a pattern of nucleotides called <code>genomeSubString</code> and use function <code>reverse_complement()</code> to output the reverse-complement for each given nucleotide.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb61"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a>reverse_complement <span class="ot">&lt;-</span> <span class="cf">function</span>(genomeSubstring){</span>
+<span id="cb61-2"><a href="#cb61-2" aria-hidden="true" tabindex="-1"></a>  complement <span class="ot">=</span> <span class="fu">c</span>(<span class="st">'A'</span> <span class="ot">=</span> <span class="st">'T'</span>, <span class="st">'C'</span> <span class="ot">=</span> <span class="st">'G'</span>, <span class="st">'G'</span> <span class="ot">=</span> <span class="st">'C'</span>, <span class="st">'T'</span> <span class="ot">=</span> <span class="st">'A'</span>)</span>
+<span id="cb61-3"><a href="#cb61-3" aria-hidden="true" tabindex="-1"></a>  reverse_complement <span class="ot">&lt;-</span> <span class="st">''</span></span>
+<span id="cb61-4"><a href="#cb61-4" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb61-5"><a href="#cb61-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (nucleotide <span class="cf">in</span> <span class="fu">rev</span>(<span class="fu">strsplit</span>(genomeSubstring, <span class="st">""</span>)[[<span class="dv">1</span>]])){</span>
+<span id="cb61-6"><a href="#cb61-6" aria-hidden="true" tabindex="-1"></a>    reverse_complement <span class="ot">&lt;-</span> <span class="fu">paste</span>(reverse_complement, complement[nucleotide], <span class="at">sep=</span><span class="st">""</span>)</span>
+<span id="cb61-7"><a href="#cb61-7" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb61-8"><a href="#cb61-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(reverse_complement)</span>
+<span id="cb61-9"><a href="#cb61-9" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb61-10"><a href="#cb61-10" aria-hidden="true" tabindex="-1"></a><span class="fu">reverse_complement</span>(<span class="st">"ATTG"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "CAAT"</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="finding-the-replication-origin-part-iii" class="level1">
+<h1>Finding the Replication Origin, Part III</h1>
+<section id="challenge-1-3" class="level3">
+<h3 class="anchored" data-anchor-id="challenge-1-3">Challenge 1</h3>
 </section>
 </section>
 
