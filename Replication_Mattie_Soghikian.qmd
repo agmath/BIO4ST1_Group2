@@ -421,3 +421,22 @@ find_frequent_kmers("AAATAAG", 3)
 ```
 
 ### Challenge 2
+
+Input a pattern of nucleotides called `genomeSubString` and use function `reverse_complement()` to output the reverse-complement for each given nucleotide.
+
+```{r}
+reverse_complement <- function(genomeSubstring){
+  complement = c('A' = 'T', 'C' = 'G', 'G' = 'C', 'T' = 'A')
+  reverse_complement <- ''
+  
+  for (nucleotide in rev(strsplit(genomeSubstring, "")[[1]])){
+    reverse_complement <- paste(reverse_complement, complement[nucleotide], sep="")
+  }
+  return(reverse_complement)
+}
+reverse_complement("ATTG")
+```
+
+# Finding the Replication Origin, Part III
+
+### Challenge 1
