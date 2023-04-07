@@ -440,3 +440,30 @@ reverse_complement("ATTG")
 # Finding the Replication Origin, Part III
 
 ### Challenge 1
+
+Create function `clump_finding()` that identifies all possible 3-mers in a sequence of nucleotides.
+
+```{r}
+initialize_k_mer_dict <- function(k){
+  nucleotides <- c("A", "C", "G", "T")
+
+  k_mers_dict <- expand.grid(rep(list(nucleotides), k)) %>%
+    unite("k_mers", everything(), remove = TRUE, sep = "") %>%
+    unique() %>%
+    mutate(count = 0)
+  
+  return(k_mers_dict)
+}
+
+initialize_k_mer_dict(3)
+```
+
+```{r}
+clump_finding <- function(genome,L,K,t){
+  initial_window <- str_sub(genome, start = 1, end = L)
+}
+```
+
+### Challenge 2
+
+Use new `clump_finding()` function to find all 9-mers corresponding to clumps in the *E.Coli* genome.
