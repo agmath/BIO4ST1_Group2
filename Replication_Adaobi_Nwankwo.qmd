@@ -20,7 +20,7 @@ library(tidyverse)
 Creating a list of nucleotides contaning the four nucleotides.
 
 ```{r}
-nucleotides <- c("Adenine (A)", "Cytosine (C), ", "Guanine (G)", "Thymine (T)")
+nucleotides <- c("(A)", "(C), ", "(G)", "(T)")
 
 nucleotides
 ```
@@ -80,7 +80,7 @@ Writing and executing a loop.
 myProduct <- 1
 
 for(j in 1:15){
-  myProduct <- myProduct + i
+  myProduct <- myProduct * i
   print(myProduct)
 }
 ```
@@ -106,7 +106,7 @@ randGenome <- paste(randGenome, collapse = "")
 randGenome
 
 for(j in 1:15){
-  print(str_sub(randGenome, start = 1, end = 1))
+  print(str_sub(randGenome, start = i, end = i))
 }
 ```
 
@@ -178,10 +178,10 @@ Adenine_count <- 0
 #nchar: number of characters
 
 for(i in 1:nchar(randGenome)){
-  if(str_sub(randGenome, start = i, end = i) == "A"){
+  if(str_sub(randGenome, start = i, end = i) == "A")
     Adenine_count <- Adenine_count + 1
   }
-}
+
 Cytosine_count <- 0
 
 for(i in 1:nchar(randGenome)){
@@ -261,6 +261,8 @@ print(Guanine_count)
 ```
 
 ## Challenge 10
+
+Using the rosalind code, I was able to solve the Rosalind problem.
 
 ```{r}
 vib_c <- scan("~/Desktop/Bioinformatics Data/Rosalind_DNA.txt", what = "character", sep = NULL)
@@ -411,6 +413,8 @@ generate_3_mers(myString)
 
 ## Challenge 5
 
+The count pattern function takes in two arguments, string and pattern. This code returns the total number of matches found or occurrences of the pattern within the string. In the code block below, a random genome of 2000 is counted for CTG and it shows up 31 times within the random genome string.
+
 ```{r}
 count_pattern <- function(string, pattern) {
   nt_matches <- 0
@@ -424,17 +428,23 @@ count_pattern <- function(string, pattern) {
 count_pattern(rand_genome(2000), "CTG")
 ```
 
+Here a string from rosalind is imported.
+
 ```{r}
 rosalind_string <- "TTAGTCCCCAGTCCCCAGTCCCCTCCAGTCCCCGCAGTCCCCCAGTCCCCAGTCCCCCAGTCCCCAGTCCCCAGTCCCCAGCCAGTCCCCACCGGTGTGGTAGTCCCCCAAGTCCCCAAGTCCCCAGTGATAACAGTCCCCTTCTCTAAGTCCCCAGTCCCCGAGTCCCCAGTTGAGTCCCCCTAGTCCCCGCCTATAGTCCCCCCACGAGTCCCCTGAAGTCCCCTGAAAGTCCCCCTGACGCAAGTCCCCTAGTCCCCCAGTCCCCAGAAGTCCCCCAGTCCCCTAAGTCCCCTAGAGTCCCCAGTCCCCGAGAGTCCCCTGTAAGTCCCCCTCAGTCCCCGGCTCGAGTCCCCGATGAGTCCCCGAGTCCCCCCGAGTCCCCGGTTAGTCCCCAAGTCCCCGAGTCCCCGAGTCCCCTGAAGTCCCCGAGTCCCCTCGAGTCCCCAGTCCCCGCTAGTCCCCCTTAGTCCCCAGTCCCCGAGTCCCCAGTCCCCAGTCCCCAAGTCCCCCGTGGAGAAGTCCCCGCAGTCCCCAGTCCCCTCGATTAGTCCCCATGCGATAGTCCCCCAGTCCCCTGAGTCCCCAGTCCCCAAGTCCCCGTTAGTCCCCGAGTCCCCAAAATTAGTCCCCGAAGTCCCCCCGTAGTCCCCTGTGAGTCCCCGAGTCCCCAGTCCCCTTACGAGTCCCCGTCCAGTCCCCTGATTATATGAGAGTCCCCTTGGAGTCCCCTAGTCCCCTAAGTCCCCAGAGTGATTCTTAGTCCCCAAGTCCCCAGTCCCCGCTAGTCCCCATAGTCCCCAGTCCCCCGCAGTCCCCCTACCTCAGTCCCCAAGTCCCCCAGTCCCCCAGTCCCCGGTATTAGTCCCCGAAGTCCCCGAGTCCCCATACTCAAGTCCCCCAGTCCCCGGATGGTAGAGTCCCCAGTCCCCTAGTCCCCCCGAGTCCCCAGTCCCCCAGTCCCCACGGCGGCTAAAGTCCCCTAGTCCCCAGTCCCCGATGCAGTCCCCAAGTCCCCAGTCCCC"
 ```
+
+The count pattern function is tested on this rosalind string. By looking at the code block below it is evident that AGTCCCAG shows up 25 times in the rosalind string. This code suggests this pattern appeared 25 times within this genome. This was the correct answer meaning the function worked.
 
 ```{r}
 count_pattern(rosalind_string, "AGTCCCCAG")
 ```
 
-This code suggests this pattern appeared 25 times within this genome. This was the correct answer meaning the function worked.
-
 # Replication Origin, Part 2
+
+## Challenge 1
+
+Here, I'm finding the most frequent words in a string. Find_fequent_kmers will generate a list of the most frequent k-mers in genomeString. The unique function removes duplicates.
 
 ```{r}
 find_frequent_kmers <- function(genome, k){
@@ -456,11 +466,17 @@ find_frequent_kmers <- function(genome, k){
 }
 ```
 
+Here the function is tested. The code block below returned two 2-mers "(TC and AT) in the random genome with a length of 10.
+
 ```{r}
 myGenome <- rand_genome(10)
 find_frequent_kmers(myGenome, 2)
 find_frequent_kmers("AAATAAAG", 3)
 ```
+
+## Challenge 2
+
+The reverse_complement function takes a string and returns its reverse complement. The complement of A is T, the complement of G is C. The reverse_complement function reverses the order of the nucleotides and gives the complement of each nucleotide. In the code block below, ATTG is input and CAAT is output.
 
 ```{r}
 reverse_complement <- function(genomeSubString){
@@ -472,4 +488,91 @@ reverse_complement <- function(genomeSubString){
     return(reverse_complement)
 }
 reverse_complement("ATTG")
+```
+
+# Replication Origin, Part 3
+
+## Challenge 1
+
+Here, we will find the most frequent words in a string. Initialize_k\_mer_dict gives possible combinations of kmers but doesn't count them. Instead it takes k and generates all possible DNA k-mers of length k containing the nucleotides A, C, G, and T.
+
+```{r}
+initialize_k_mer_dict <- function(k){
+  nucleotides <- c("A", "C", "G", "T")
+
+  k_mers_dict <- expand.grid(rep(list(nucleotides), k)) %>%
+    unite("k_mers", everything(), remove = TRUE, sep = "") %>%
+    unique() %>%
+    mutate(count = 0)
+  
+  return(k_mers_dict)
+}
+
+k_mers_dict <- initialize_k_mer_dict(9)
+```
+
+Here, we utilize this function and it is evident that it returns a table giving the possible combinations of kmers.
+
+```{r}
+initialize_k_mer_dict(2)
+#gives possible combinations of kmers
+#doesn't count them 
+```
+
+In the code block below, L is window length, K is k-mer length and T is frequency threshold. The clump finding function takes in these 4 parameters, including genome. The function takes an initial window length from the beginning of genome. The count pattern functions counts the occurrences in the window. In this code block, j and i are iterators.
+
+```{r}
+#L is window length
+#K is k-mer length
+# T is frequency threshold
+clump_finding <- function(genome, L, K, T) {
+  intial_window <- str_sub(genome, start = 1, end = L )
+  my_kmer_dict <- initialize_k_mer_dict(k)
+  
+  ng <- nchar(genome)
+  
+  for(i in 1:(L - (k - 1)) ) {
+    #don't want to escape the window
+    curr_kmer <- str_sub(intial_window, i, i+k-1)
+    curr_count <- count_pattern(intial_window, curr_kmer)
+#curr_kmer finds whatever kmer we're on, then curr_count counts how our curr_kmer appears in red window 
+#find the row in my_kmer_dict that corresponds to curr_kmer
+# then write curr_count into the count column
+    curr_row <- which(my_kmer_dict$k_mer == curr_kmer)
+    my_kmer_dict$count[curr_row] <- curr_count
+  }
+  candidates <- my_kmer_dict %>% 
+    filter(count>=t) %>%
+    pull(k_mer)
+  
+  for(j in 2:(ng - (L-2))) {
+    rem_pattern <- str_sub(genome, j - 1, j - 1 + (k-1))
+    add_pattern <- str_sub(genome, j + (L - 2) - (k-1), j + (L - 2))
+    
+    rem_row <- which(kmer_dict$k_mers == rem_pattern)
+    add_row <- which(kmer_dict$k_mers == add_pattern)
+    
+    kmer_dict$count[rem_row] <- kmer_dict$count[rem_row] - 1
+    kmer_dict$count[add_row] <- kmer_dict$count[add_row] + 1
+    
+    if(kmer_dict$count[add_row >= t]){
+      candidates <- append(candidates, add_pattern)
+      candidates <- unique(candidates)
+    }
+  }
+  return(candidates)
+}
+```
+
+```{r}
+myGenome <- rand_genome(250000)
+
+```
+
+The function below returns the row where the k-mer column matches the string ACTTGCATG.
+
+```{r}
+    my_kmers <- initialize_k_mer_dict(9)
+    which(my_kmers$k_mer == "ACTTGCATG")
+    # which function identifies whhich row kmer is in
 ```

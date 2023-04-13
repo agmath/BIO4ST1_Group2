@@ -18,14 +18,14 @@ Creating a list of nucleotides contaning the four nucleotides.
 ::: {.cell}
 
 ```{.r .cell-code}
-nucleotides <- c("Adenine (A)", "Cytosine (C), ", "Guanine (G)", "Thymine (T)")
+nucleotides <- c("(A)", "(C), ", "(G)", "(T)")
 
 nucleotides
 ```
 
 ::: {.cell-output .cell-output-stdout}
 ```
-[1] "Adenine (A)"    "Cytosine (C), " "Guanine (G)"    "Thymine (T)"   
+[1] "(A)"   "(C), " "(G)"   "(T)"  
 ```
 :::
 :::
@@ -48,7 +48,7 @@ paste(randGenome, collapse = "")
 
 ::: {.cell-output .cell-output-stdout}
 ```
-[1] "Guanine (G)Guanine (G)Guanine (G)Thymine (T)Adenine (A)Cytosine (C), Thymine (T)Guanine (G)Adenine (A)Adenine (A)Guanine (G)Guanine (G)Cytosine (C), Guanine (G)Guanine (G)"
+[1] "(T)(T)(A)(A)(G)(T)(C), (C), (G)(G)(T)(C), (G)(A)(T)"
 ```
 :::
 :::
@@ -71,7 +71,7 @@ paste(randGenome, collapse = "")
 
 ::: {.cell-output .cell-output-stdout}
 ```
-[1] "Cytosine (C), Cytosine (C), Thymine (T)Guanine (G)Cytosine (C), Guanine (G)Cytosine (C), Guanine (G)Cytosine (C), Guanine (G)Guanine (G)Thymine (T)Guanine (G)Adenine (A)Cytosine (C), Adenine (A)Thymine (T)Thymine (T)Guanine (G)Cytosine (C), Cytosine (C), Adenine (A)Guanine (G)Thymine (T)Adenine (A)Guanine (G)Cytosine (C), Thymine (T)Guanine (G)Guanine (G)Guanine (G)Adenine (A)Adenine (A)Adenine (A)Adenine (A)Thymine (T)Thymine (T)Adenine (A)Guanine (G)Guanine (G)Adenine (A)Thymine (T)Cytosine (C), Guanine (G)Guanine (G)Cytosine (C), Adenine (A)Thymine (T)Thymine (T)Adenine (A)Cytosine (C), Cytosine (C), Guanine (G)Adenine (A)Guanine (G)Cytosine (C), Thymine (T)Cytosine (C), Thymine (T)Guanine (G)Cytosine (C), Thymine (T)Thymine (T)Cytosine (C), Cytosine (C), Cytosine (C), Guanine (G)Cytosine (C), Thymine (T)Adenine (A)Thymine (T)Guanine (G)Guanine (G)Guanine (G)Guanine (G)Cytosine (C), Cytosine (C), Adenine (A)Thymine (T)Adenine (A)Adenine (A)Thymine (T)Cytosine (C), Cytosine (C), Adenine (A)Thymine (T)Adenine (A)Thymine (T)Guanine (G)Cytosine (C), Guanine (G)Guanine (G)Guanine (G)Guanine (G)Adenine (A)Adenine (A)Guanine (G)Thymine (T)Adenine (A)Guanine (G)Adenine (A)Thymine (T)Thymine (T)Adenine (A)Guanine (G)Adenine (A)Thymine (T)Thymine (T)Cytosine (C), Thymine (T)Thymine (T)Adenine (A)Thymine (T)Guanine (G)Cytosine (C), Cytosine (C), Cytosine (C), Adenine (A)Guanine (G)Thymine (T)Adenine (A)Adenine (A)Cytosine (C), Thymine (T)Cytosine (C), Guanine (G)Thymine (T)Cytosine (C), Thymine (T)Adenine (A)Thymine (T)Cytosine (C), Guanine (G)Adenine (A)Cytosine (C), Thymine (T)Cytosine (C), Guanine (G)Adenine (A)Cytosine (C), Cytosine (C), Cytosine (C), Cytosine (C), Adenine (A)Adenine (A)Thymine (T)Adenine (A)Thymine (T)Thymine (T)Cytosine (C), Adenine (A)Thymine (T)Guanine (G)Adenine (A)Adenine (A)Guanine (G)Cytosine (C), Guanine (G)Adenine (A)Cytosine (C), Guanine (G)Thymine (T)Thymine (T)Cytosine (C), Thymine (T)Thymine (T)Cytosine (C), Adenine (A)Adenine (A)Adenine (A)Cytosine (C), Cytosine (C), Cytosine (C), Adenine (A)Thymine (T)Adenine (A)Guanine (G)Guanine (G)Guanine (G)Guanine (G)Adenine (A)Cytosine (C), Cytosine (C), Cytosine (C), Guanine (G)Cytosine (C), Cytosine (C), Cytosine (C), Guanine (G)Thymine (T)Cytosine (C), Guanine (G)Thymine (T)Guanine (G)Cytosine (C), Adenine (A)Thymine (T)Adenine (A)Thymine (T)Cytosine (C), Guanine (G)Thymine (T)Cytosine (C), Adenine (A)Thymine (T)Guanine (G)Thymine (T)Guanine (G)Guanine (G)Adenine (A)Thymine (T)Thymine (T)Cytosine (C), Thymine (T)Guanine (G)Guanine (G)Adenine (A)Thymine (T)Adenine (A)Adenine (A)Cytosine (C), Guanine (G)Adenine (A)Cytosine (C), Guanine (G)Thymine (T)Adenine (A)Guanine (G)Thymine (T)Cytosine (C), Thymine (T)Thymine (T)Thymine (T)Adenine (A)Adenine (A)Guanine (G)Guanine (G)Cytosine (C), Cytosine (C), Adenine (A)Adenine (A)Cytosine (C), Thymine (T)Thymine (T)Adenine (A)Thymine (T)Thymine (T)Guanine (G)Cytosine (C), Cytosine (C), Cytosine (C), Thymine (T)Guanine (G)Thymine (T)Cytosine (C), Adenine (A)Cytosine (C), Cytosine (C), Guanine (G)Guanine (G)Guanine (G)Guanine (G)Adenine (A)Adenine (A)Adenine (A)Thymine (T)Cytosine (C), Guanine (G)Guanine (G)Guanine (G)Cytosine (C), Guanine (G)Adenine (A)Thymine (T)Cytosine (C), Adenine (A)Adenine (A)Cytosine (C), Guanine (G)Cytosine (C), Thymine (T)Cytosine (C), Thymine (T)Guanine (G)Guanine (G)Adenine (A)Cytosine (C), Thymine (T)Guanine (G)Adenine (A)Adenine (A)Adenine (A)Adenine (A)Adenine (A)Cytosine (C), Adenine (A)Guanine (G)Adenine (A)Adenine (A)Adenine (A)Adenine (A)Guanine (G)Guanine (G)Adenine (A)Adenine (A)Cytosine (C), Thymine (T)Guanine (G)Guanine (G)Adenine (A)Guanine (G)Adenine (A)Adenine (A)Guanine (G)Cytosine (C), Thymine (T)Thymine (T)Adenine (A)Cytosine (C), Adenine (A)Thymine (T)Guanine (G)Guanine (G)Guanine (G)Guanine (G)Guanine (G)Guanine (G)Guanine (G)Guanine (G)Guanine (G)Guanine (G)Adenine (A)Guanine (G)Thymine (T)Guanine (G)Cytosine (C), Guanine (G)Adenine (A)Adenine (A)Thymine (T)Guanine (G)Adenine (A)Adenine (A)Cytosine (C), Adenine (A)Guanine (G)Thymine (T)Cytosine (C), Cytosine (C), Cytosine (C), Guanine (G)Cytosine (C), Thymine (T)Adenine (A)Cytosine (C), Thymine (T)Thymine (T)Adenine (A)Guanine (G)Guanine (G)Thymine (T)Guanine (G)Thymine (T)Cytosine (C), Cytosine (C), Thymine (T)Guanine (G)Guanine (G)Cytosine (C), Guanine (G)Guanine (G)Thymine (T)Adenine (A)Adenine (A)Thymine (T)Guanine (G)Guanine (G)Guanine (G)Cytosine (C), Guanine (G)Thymine (T)Guanine (G)Cytosine (C), Adenine (A)Cytosine (C), Adenine (A)Guanine (G)Thymine (T)Guanine (G)Cytosine (C), Guanine (G)Cytosine (C), Cytosine (C), Thymine (T)Cytosine (C), Thymine (T)Cytosine (C), Thymine (T)Thymine (T)Guanine (G)Guanine (G)Thymine (T)Cytosine (C), Thymine (T)Cytosine (C), Adenine (A)Cytosine (C), Cytosine (C), Adenine (A)Guanine (G)Guanine (G)Cytosine (C), Cytosine (C), Thymine (T)Cytosine (C), Adenine (A)Adenine (A)Adenine (A)Cytosine (C), Adenine (A)Thymine (T)Thymine (T)Adenine (A)Thymine (T)Cytosine (C), Thymine (T)Adenine (A)Guanine (G)Adenine (A)Cytosine (C), Guanine (G)Thymine (T)Thymine (T)Thymine (T)Adenine (A)Thymine (T)Thymine (T)Cytosine (C), Thymine (T)Thymine (T)Cytosine (C), Cytosine (C), Cytosine (C), Adenine (A)Adenine (A)Adenine (A)Adenine (A)Cytosine (C), Guanine (G)Cytosine (C), Guanine (G)Cytosine (C), Guanine (G)Adenine (A)Thymine (T)Cytosine (C), Adenine (A)Adenine (A)Thymine (T)Adenine (A)Guanine (G)Cytosine (C), Guanine (G)Thymine (T)Adenine (A)Thymine (T)Cytosine (C), Cytosine (C), Adenine (A)Adenine (A)Cytosine (C), Guanine (G)Guanine (G)Adenine (A)Guanine (G)Adenine (A)Cytosine (C), Adenine (A)Guanine (G)Cytosine (C), Adenine (A)Guanine (G)Adenine (A)Cytosine (C), Guanine (G)Adenine (A)Cytosine (C), Adenine (A)Adenine (A)Adenine (A)Cytosine (C), Guanine (G)Guanine (G)Guanine (G)Cytosine (C), Cytosine (C), Thymine (T)Thymine (T)Adenine (A)Guanine (G)Guanine (G)Thymine (T)Cytosine (C), Adenine (A)Adenine (A)Guanine (G)Guanine (G)Guanine (G)Adenine (A)Adenine (A)Cytosine (C), Thymine (T)Guanine (G)Cytosine (C), Adenine (A)Adenine (A)Thymine (T)Cytosine (C), Thymine (T)Adenine (A)Thymine (T)Thymine (T)Adenine (A)Guanine (G)Adenine (A)Cytosine (C), Adenine (A)Guanine (G)Guanine (G)Guanine (G)Cytosine (C), Thymine (T)Cytosine (C), Adenine (A)Adenine (A)Adenine (A)Cytosine (C), Adenine (A)Adenine (A)Guanine (G)Adenine (A)Adenine (A)Adenine (A)Adenine (A)Adenine (A)Guanine (G)Thymine (T)Cytosine (C), Adenine (A)Thymine (T)Adenine (A)Thymine (T)Thymine (T)Cytosine (C), Thymine (T)Thymine (T)Adenine (A)Thymine (T)Cytosine (C), Guanine (G)Adenine (A)Guanine (G)Guanine (G)Adenine (A)Guanine (G)Cytosine (C), Guanine (G)Guanine (G)Cytosine (C), Guanine (G)Cytosine (C), Thymine (T)Guanine (G)Cytosine (C), Thymine (T)Adenine (A)Thymine (T)Cytosine (C), Cytosine (C), Guanine (G)Guanine (G)Adenine (A)Adenine (A)Thymine (T)Adenine (A)Thymine (T)Cytosine (C), Adenine (A)Cytosine (C), Thymine (T)Guanine (G)Guanine (G)Cytosine (C), Thymine (T)Guanine (G)Guanine (G)Guanine (G)Cytosine (C), Adenine (A)Guanine (G)Cytosine (C), Adenine (A)Thymine (T)Cytosine (C), Guanine (G)Adenine (A)Cytosine (C), Cytosine (C), Thymine (T)Cytosine (C), Guanine (G)Cytosine (C), Guanine (G)Thymine (T)Adenine (A)Adenine (A)Guanine (G)Guanine (G)Guanine (G)Cytosine (C), Cytosine (C), Adenine (A)Guanine (G)Adenine (A)Adenine (A)Adenine (A)Guanine (G)Guanine (G)Thymine (T)Cytosine (C), Thymine (T)Thymine (T)Thymine (T)Guanine (G)Thymine (T)Cytosine (C), Adenine (A)Guanine (G)Adenine (A)Adenine (A)Cytosine (C), Adenine (A)Thymine (T)Thymine (T)Thymine (T)Thymine (T)Guanine (G)Guanine (G)Adenine (A)Adenine (A)Guanine (G)Cytosine (C), Guanine (G)Guanine (G)Guanine (G)Adenine (A)Adenine (A)Guanine (G)Guanine (G)Guanine (G)Guanine (G)Cytosine (C), Guanine (G)Guanine (G)Cytosine (C), Cytosine (C), Adenine (A)Guanine (G)Adenine (A)Thymine (T)Adenine (A)Cytosine (C), Guanine (G)Adenine (A)Guanine (G)Cytosine (C), Adenine (A)Cytosine (C), Adenine (A)Thymine (T)Cytosine (C), Thymine (T)Thymine (T)Thymine (T)Guanine (G)Thymine (T)Adenine (A)Adenine (A)Thymine (T)Guanine (G)Thymine (T)Thymine (T)Cytosine (C), Adenine (A)Guanine (G)Cytosine (C), Thymine (T)Thymine (T)Thymine (T)Guanine (G)Adenine (A)Thymine (T)Adenine (A)Cytosine (C), Thymine (T)Cytosine (C), Guanine (G)Guanine (G)Guanine (G)Thymine (T)Cytosine (C), Guanine (G)Cytosine (C), Thymine (T)Guanine (G)Thymine (T)Cytosine (C), Adenine (A)Guanine (G)Thymine (T)Guanine (G)Thymine (T)Thymine (T)Cytosine (C), Adenine (A)Cytosine (C), Thymine (T)Cytosine (C), Adenine (A)Cytosine (C), Guanine (G)Cytosine (C), Guanine (G)Cytosine (C), Adenine (A)Cytosine (C), Adenine (A)Guanine (G)Guanine (G)Cytosine (C), Cytosine (C), Adenine (A)Guanine (G)Guanine (G)Cytosine (C), Thymine (T)Cytosine (C), Thymine (T)Cytosine (C), Thymine (T)Cytosine (C), Adenine (A)Adenine (A)Cytosine (C), Adenine (A)Thymine (T)Cytosine (C), Guanine (G)Cytosine (C), Thymine (T)Guanine (G)Adenine (A)Adenine (A)Cytosine (C), Adenine (A)Adenine (A)Thymine (T)Adenine (A)Thymine (T)Cytosine (C), Thymine (T)Guanine (G)Cytosine (C), Adenine (A)Adenine (A)Cytosine (C), Guanine (G)Guanine (G)Cytosine (C), Thymine (T)Cytosine (C), Guanine (G)Adenine (A)Adenine (A)Adenine (A)Cytosine (C), Guanine (G)Thymine (T)Cytosine (C), Thymine (T)Thymine (T)Guanine (G)Adenine (A)Adenine (A)Adenine (A)Cytosine (C), Cytosine (C), Guanine (G)Cytosine (C), Guanine (G)Thymine (T)Adenine (A)Cytosine (C), Thymine (T)Thymine (T)Cytosine (C), Guanine (G)Thymine (T)Guanine (G)Adenine (A)Guanine (G)Thymine (T)Guanine (G)Adenine (A)Guanine (G)Adenine (A)Thymine (T)Thymine (T)Guanine (G)Cytosine (C), Cytosine (C), Adenine (A)Guanine (G)Guanine (G)Thymine (T)Thymine (T)Cytosine (C), Guanine (G)Adenine (A)Adenine (A)Thymine (T)Cytosine (C), Cytosine (C), Thymine (T)Cytosine (C), Thymine (T)Cytosine (C), Adenine (A)Guanine (G)Adenine (A)Guanine (G)Cytosine (C), Cytosine (C), Thymine (T)Cytosine (C), Adenine (A)Guanine (G)Thymine (T)Adenine (A)Cytosine (C), Guanine (G)Thymine (T)Cytosine (C), Guanine (G)Thymine (T)Adenine (A)Guanine (G)Thymine (T)Adenine (A)Adenine (A)Cytosine (C), Cytosine (C), Cytosine (C), Adenine (A)Thymine (T)Adenine (A)Thymine (T)Guanine (G)Guanine (G)Guanine (G)Cytosine (C), Thymine (T)Guanine (G)Thymine (T)Guanine (G)Adenine (A)Guanine (G)Adenine (A)Thymine (T)Thymine (T)Thymine (T)Thymine (T)Adenine (A)Thymine (T)Guanine (G)Adenine (A)Adenine (A)Adenine (A)Thymine (T)Thymine (T)Guanine (G)Cytosine (C), Thymine (T)Cytosine (C), Cytosine (C), Cytosine (C), Guanine (G)Guanine (G)Cytosine (C), Thymine (T)Guanine (G)Guanine (G)Guanine (G)Guanine (G)Thymine (T)Thymine (T)Cytosine (C), Guanine (G)Thymine (T)Guanine (G)Guanine (G)Cytosine (C), Thymine (T)Cytosine (C), Adenine (A)Adenine (A)Cytosine (C), Thymine (T)Cytosine (C), Guanine (G)Thymine (T)Adenine (A)Thymine (T)Guanine (G)Guanine (G)Adenine (A)Guanine (G)Guanine (G)Adenine (A)Adenine (A)Adenine (A)Thymine (T)Guanine (G)Guanine (G)Adenine (A)Adenine (A)Cytosine (C), Guanine (G)Adenine (A)Adenine (A)Cytosine (C), Guanine (G)Adenine (A)Cytosine (C), Adenine (A)Cytosine (C), Adenine (A)Guanine (G)Cytosine (C), Thymine (T)Cytosine (C), Cytosine (C), Guanine (G)Guanine (G)Thymine (T)Cytosine (C), Guanine (G)Cytosine (C), Adenine (A)Adenine (A)Cytosine (C), Guanine (G)Thymine (T)Cytosine (C), Cytosine (C), Cytosine (C), Guanine (G)Thymine (T)Cytosine (C), Guanine (G)Adenine (A)Guanine (G)Adenine (A)Cytosine (C), Cytosine (C), Cytosine (C), Guanine (G)Cytosine (C), Adenine (A)Adenine (A)Thymine (T)Thymine (T)Guanine (G)Thymine (T)Guanine (G)Cytosine (C), Thymine (T)Cytosine (C), Guanine (G)Adenine (A)Guanine (G)Guanine (G)Cytosine (C), Thymine (T)Thymine (T)Adenine (A)Thymine (T)Thymine (T)Adenine (A)Cytosine (C), Thymine (T)Thymine (T)Cytosine (C), Thymine (T)Thymine (T)Guanine (G)Guanine (G)Cytosine (C), Adenine (A)Thymine (T)Guanine (G)Guanine (G)Adenine (A)Guanine (G)Guanine (G)Thymine (T)Guanine (G)Thymine (T)Guanine (G)Guanine (G)Cytosine (C), Thymine (T)Cytosine (C), Guanine (G)Cytosine (C), Thymine (T)Cytosine (C), Thymine (T)Cytosine (C), Cytosine (C), Thymine (T)Thymine (T)Cytosine (C), Adenine (A)Adenine (A)Cytosine (C), Guanine (G)Adenine (A)Guanine (G)Adenine (A)Adenine (A)Thymine (T)Guanine (G)Thymine (T)Thymine (T)Adenine (A)Cytosine (C), Thymine (T)Thymine (T)Cytosine (C), Adenine (A)Cytosine (C), Cytosine (C), Cytosine (C), Cytosine (C), Thymine (T)Thymine (T)Cytosine (C), Cytosine (C), Cytosine (C), Thymine (T)Thymine (T)Thymine (T)Guanine (G)Guanine (G)Thymine (T)Cytosine (C), Thymine (T)Guanine (G)Thymine (T)Thymine (T)Cytosine (C), Adenine (A)Thymine (T)Cytosine (C), Adenine (A)Adenine (A)Guanine (G)Thymine (T)Cytosine (C), Thymine (T)Thymine (T)Cytosine (C), Adenine (A)Thymine (T)Cytosine (C), Guanine (G)Cytosine (C), Adenine (A)Adenine (A)Adenine (A)Thymine (T)Adenine (A)Thymine (T)Adenine (A)Guanine (G)Adenine (A)Thymine (T)Guanine (G)Adenine (A)Thymine (T)Guanine (G)Thymine (T)Cytosine (C), Thymine (T)Adenine (A)Adenine (A)Guanine (G)Thymine (T)Adenine (A)Cytosine (C), Thymine (T)Adenine (A)Cytosine (C), Adenine (A)Cytosine (C), Adenine (A)Guanine (G)Cytosine (C), Cytosine (C), Guanine (G)Cytosine (C), Thymine (T)Guanine (G)Guanine (G)Thymine (T)Thymine (T)Thymine (T)Adenine (A)Adenine (A)Guanine (G)Cytosine (C), Thymine (T)Guanine (G)Cytosine (C), Cytosine (C), Adenine (A)Adenine (A)Adenine (A)Cytosine (C), Thymine (T)Guanine (G)Cytosine (C), Thymine (T)Cytosine (C), Guanine (G)Cytosine (C), Adenine (A)Cytosine (C), Guanine (G)Adenine (A)Cytosine (C), Cytosine (C), Thymine (T)Guanine (G)Thymine (T)Thymine (T)Adenine (A)Guanine (G)Adenine (A)Adenine (A)Adenine (A)Thymine (T)Guanine (G)Cytosine (C), Thymine (T)Cytosine (C), Thymine (T)Cytosine (C), Guanine (G)Guanine (G)Cytosine (C), Thymine (T)Adenine (A)Adenine (A)Adenine (A)Guanine (G)Thymine (T)Guanine (G)Thymine (T)Adenine (A)Thymine (T)Guanine (G)Thymine (T)Cytosine (C), Thymine (T)Adenine (A)Guanine (G)Cytosine (C), Guanine (G)Thymine (T)Thymine (T)Cytosine (C), Guanine (G)Thymine (T)Guanine (G)Cytosine (C), Adenine (A)Thymine (T)Guanine (G)Thymine (T)Thymine (T)Thymine (T)Thymine (T)Adenine (A)Adenine (A)Thymine (T)Guanine (G)Adenine (A)Cytosine (C), Guanine (G)Adenine (A)Adenine (A)Guanine (G)Adenine (A)Guanine (G)Guanine (G)Cytosine (C), Cytosine (C), Thymine (T)Guanine (G)Thymine (T)Cytosine (C), Thymine (T)Adenine (A)Thymine (T)Cytosine (C), Cytosine (C), Guanine (G)Thymine (T)Cytosine (C), Thymine (T)Cytosine (C), Adenine (A)Guanine (G)Guanine (G)Cytosine (C), Cytosine (C), Cytosine (C), Adenine (A)Guanine (G)Guanine (G)Adenine (A)Guanine (G)Adenine (A)Guanine (G)Guanine (G)Thymine (T)Thymine (T)Cytosine (C), Cytosine (C), Adenine (A)Adenine (A)Guanine (G)Adenine (A)Guanine (G)Adenine (A)Cytosine (C), Guanine (G)Guanine (G)Adenine (A)Guanine (G)Guanine (G)Guanine (G)Adenine (A)Thymine (T)Thymine (T)Thymine (T)Guanine (G)Guanine (G)Adenine (A)Cytosine (C), Guanine (G)Guanine (G)Thymine (T)Adenine (A)Cytosine (C), Guanine (G)Adenine (A)Adenine (A)Adenine (A)Adenine (A)Thymine (T)Thymine (T)Thymine (T)Guanine (G)Adenine (A)Cytosine (C), Guanine (G)Guanine (G)Guanine (G)Adenine (A)Guanine (G)Adenine (A)Cytosine (C), Guanine (G)Guanine (G)Cytosine (C), Cytosine (C), Thymine (T)Cytosine (C), Thymine (T)Adenine (A)Guanine (G)Adenine (A)Thymine (T)Thymine (T)Guanine (G)Cytosine (C), Guanine (G)Adenine (A)Cytosine (C), Adenine (A)Thymine (T)Adenine (A)Thymine (T)Adenine (A)Adenine (A)Adenine (A)Thymine (T)Cytosine (C), Guanine (G)Adenine (A)Thymine (T)Thymine (T)Thymine (T)Guanine (G)Cytosine (C), Thymine (T)Cytosine (C), Guanine (G)Guanine (G)Adenine (A)Thymine (T)Cytosine (C), Thymine (T)Cytosine (C), Thymine (T)Cytosine (C), Cytosine (C), Cytosine (C), Thymine (T)Thymine (T)Guanine (G)Thymine (T)Guanine (G)Cytosine (C), Thymine (T)Guanine (G)Cytosine (C), Adenine (A)Guanine (G)Adenine (A)Cytosine (C), Adenine (A)Thymine (T)Thymine (T)Guanine (G)Thymine (T)Cytosine (C), Cytosine (C), Guanine (G)Cytosine (C), Cytosine (C), Cytosine (C), Thymine (T)Guanine (G)Adenine (A)Guanine (G)Cytosine (C), Adenine (A)Cytosine (C), Guanine (G)Cytosine (C), Thymine (T)Guanine (G)Cytosine (C), Adenine (A)Adenine (A)Thymine (T)Guanine (G)Thymine (T)Thymine (T)Guanine (G)Adenine (A)Cytosine (C), Thymine (T)Adenine (A)Cytosine (C), Thymine (T)Adenine (A)Guanine (G)Adenine (A)Guanine (G)Cytosine (C), Cytosine (C), Guanine (G)Guanine (G)Guanine (G)Guanine (G)Thymine (T)Cytosine (C), Cytosine (C), Cytosine (C), Adenine (A)Cytosine (C), Adenine (A)Adenine (A)Thymine (T)Cytosine (C), Thymine (T)Cytosine (C), Cytosine (C), Adenine (A)Guanine (G)Thymine (T)Cytosine (C), Cytosine (C), Adenine (A)Adenine (A)Adenine (A)Thymine (T)Guanine (G)Cytosine (C), Guanine (G)Thymine (T)Adenine (A)Cytosine (C), Thymine (T)Adenine (A)Cytosine (C), Thymine (T)Guanine (G)Thymine (T)Adenine (A)Adenine (A)Adenine (A)Thymine (T)Adenine (A)Thymine (T)Thymine (T)Guanine (G)Guanine (G)Cytosine (C), Thymine (T)Thymine (T)Thymine (T)Cytosine (C), Guanine (G)Adenine (A)Thymine (T)Thymine (T)Cytosine (C), Adenine (A)Cytosine (C), Cytosine (C), Guanine (G)Adenine (A)Guanine (G)Adenine (A)Cytosine (C), Guanine (G)Cytosine (C), Cytosine (C), Cytosine (C), Cytosine (C), Guanine (G)Adenine (A)Guanine (G)Cytosine (C), Guanine (G)Guanine (G)Cytosine (C), Cytosine (C), Adenine (A)Thymine (T)Adenine (A)Thymine (T)Thymine (T)Guanine (G)Guanine (G)Guanine (G)Cytosine (C), Cytosine (C), Adenine (A)Cytosine (C), Adenine (A)Guanine (G)Cytosine (C), Adenine (A)Cytosine (C), Thymine (T)Guanine (G)Adenine (A)Adenine (A)Thymine (T)Cytosine (C), Cytosine (C), Thymine (T)Thymine (T)"
+[1] "(A)(C), (A)(C), (T)(A)(C), (A)(A)(T)(G)(G)(G)(T)(A)(T)(T)(A)(T)(G)(C), (G)(T)(A)(A)(A)(A)(A)(A)(T)(T)(G)(A)(T)(C), (A)(T)(T)(G)(A)(T)(C), (A)(A)(G)(C), (A)(A)(G)(G)(A)(T)(T)(A)(T)(C), (C), (C), (C), (T)(C), (G)(G)(T)(T)(C), (G)(C), (G)(G)(T)(A)(C), (C), (G)(A)(A)(A)(A)(A)(C), (G)(T)(G)(A)(G)(C), (T)(G)(C), (G)(T)(G)(A)(A)(A)(T)(C), (G)(G)(A)(C), (A)(G)(T)(A)(A)(C), (T)(A)(T)(A)(T)(C), (G)(G)(G)(G)(A)(A)(T)(C), (A)(A)(C), (A)(A)(C), (A)(C), (G)(A)(A)(T)(C), (A)(T)(G)(T)(C), (C), (G)(C), (T)(C), (T)(A)(T)(G)(A)(C), (T)(G)(A)(T)(G)(A)(T)(A)(G)(G)(A)(T)(T)(T)(A)(G)(T)(A)(C), (G)(C), (T)(G)(T)(T)(T)(A)(G)(G)(G)(C), (C), (T)(A)(A)(C), (A)(C), (G)(T)(A)(G)(A)(T)(T)(A)(T)(A)(A)(G)(A)(T)(A)(G)(T)(C), (G)(G)(C), (C), (T)(T)(T)(A)(T)(T)(A)(A)(G)(C), (T)(A)(C), (C), (T)(C), (C), (A)(C), (T)(T)(T)(G)(C), (A)(T)(C), (A)(C), (T)(T)(C), (C), (G)(A)(G)(G)(T)(C), (A)(A)(C), (T)(G)(C), (T)(T)(G)(A)(G)(C), (C), (A)(C), (C), (G)(G)(T)(G)(C), (G)(T)(T)(G)(T)(A)(G)(A)(G)(T)(A)(G)(T)(T)(G)(A)(G)(C), (T)(C), (A)(C), (A)(C), (C), (A)(G)(C), (C), (A)(T)(C), (G)(C), (A)(C), (A)(C), (C), (G)(T)(G)(T)(T)(G)(A)(A)(T)(C), (A)(A)(C), (C), (G)(T)(C), (T)(C), (C), (C), (A)(A)(G)(A)(G)(T)(T)(A)(C), (T)(G)(C), (G)(C), (T)(A)(T)(G)(G)(G)(G)(T)(A)(C), (G)(A)(T)(A)(C), (T)(G)(C), (T)(C), (A)(T)(C), (T)(T)(C), (G)(A)(C), (C), (C), (G)(T)(C), (G)(T)(C), (G)(T)(C), (T)(G)(A)(A)(A)(C), (T)(C), (A)(T)(G)(G)(T)(G)(C), (A)(T)(T)(C), (G)(C), (T)(G)(G)(A)(A)(G)(G)(A)(T)(A)(C), (C), (C), (T)(T)(C), (C), (G)(T)(T)(A)(A)(A)(G)(A)(A)(T)(C), (C), (G)(C), (A)(T)(C), (G)(G)(G)(T)(A)(G)(G)(A)(T)(G)(C), (C), (A)(A)(G)(T)(C), (T)(A)(A)(A)(A)(A)(A)(A)(C), (T)(C), (A)(T)(C), (G)(C), (T)(T)(G)(T)(G)(C), (G)(T)(G)(T)(A)(A)(T)(A)(A)(A)(A)(T)(T)(G)(T)(G)(G)(C), (T)(A)(T)(G)(C), (C), (T)(G)(T)(C), (G)(T)(T)(G)(A)(A)(C), (A)(A)(G)(T)(C), (G)(T)(T)(G)(C), (A)(C), (C), (G)(C), (T)(G)(G)(C), (C), (A)(G)(G)(A)(T)(A)(C), (C), (C), (C), (C), (C), (A)(C), (A)(T)(C), (G)(G)(T)(G)(A)(T)(T)(G)(C), (A)(G)(G)(G)(C), (A)(C), (C), (C), (G)(G)(G)(T)(T)(C), (T)(C), (T)(A)(G)(A)(A)(T)(G)(A)(T)(G)(G)(G)(C), (C), (C), (G)(C), (G)(C), (C), (C), (C), (C), (T)(C), (A)(A)(A)(C), (A)(A)(A)(C), (C), (C), (T)(T)(G)(C), (G)(G)(T)(C), (A)(T)(C), (G)(A)(A)(G)(A)(T)(C), (C), (C), (G)(C), (C), (T)(T)(T)(A)(A)(A)(C), (T)(T)(G)(C), (T)(T)(C), (C), (T)(C), (A)(C), (T)(T)(G)(G)(T)(A)(G)(G)(C), (C), (C), (G)(A)(T)(A)(G)(G)(T)(T)(A)(T)(A)(T)(C), (C), (T)(G)(C), (A)(A)(G)(C), (G)(T)(A)(G)(G)(A)(G)(C), (T)(G)(T)(G)(G)(G)(A)(C), (G)(C), (C), (G)(G)(C), (G)(G)(T)(G)(T)(A)(A)(G)(A)(G)(G)(A)(C), (G)(G)(C), (A)(T)(A)(A)(T)(G)(G)(T)(C), (A)(T)(G)(G)(T)(A)(A)(G)(C), (G)(T)(T)(C), (G)(C), (G)(G)(T)(C), (T)(T)(G)(T)(G)(G)(T)(A)(T)(G)(G)(T)(A)(G)(C), (G)(A)(G)(A)(C), (A)(A)(T)(A)(T)(G)(G)(C), (G)(T)(A)(C), (G)(T)(T)(T)(G)(A)(C), (G)(T)(A)(A)(A)(G)(A)(A)(C), (T)(T)(T)(A)(A)(C), (G)(T)(T)(T)(C), (G)(T)(G)(T)(A)(T)(A)(T)(G)(C), (T)(G)(C), (G)(A)(A)(G)(C), (A)(G)(C), (A)(C), (G)(C), (T)(G)(C), (C), (T)(G)(G)(A)(C), (C), (C), (G)(C), (C), (T)(C), (C), (G)(A)(T)(C), (A)(G)(T)(T)(T)(A)(A)(G)(A)(C), (C), (C), (A)(C), (A)(T)(A)(T)(T)(C), (A)(T)(T)(G)(G)(T)(T)(A)(G)(G)(A)(T)(G)(G)(A)(G)(C), (A)(A)(G)(G)(A)(G)(A)(T)(G)(G)(A)(T)(A)(C), (G)(A)(C), (G)(A)(A)(C), (T)(A)(A)(C), (G)(G)(A)(A)(A)(T)(G)(A)(G)(C), (G)(A)(C), (C), (A)(A)(T)(C), (C), (A)(C), (C), (A)(A)(A)(A)(T)(A)(C), (C), (A)(T)(G)(T)(G)(A)(C), (G)(G)(A)(G)(C), (C), (A)(G)(A)(G)(T)(A)(G)(G)(T)(G)(T)(T)(T)(C), (G)(C), (C), (C), (T)(G)(C), (C), (T)(G)(C), (G)(C), (G)(A)(T)(C), (C), (G)(C), (T)(A)(A)(T)(C), (T)(G)(G)(A)(G)(A)(C), (T)(C), (G)(A)(C), (A)(A)(A)(A)(G)(G)(C), (T)(G)(A)(C), (T)(G)(C), (T)(C), (G)(G)(A)(G)(G)(C), (T)(C), (T)(G)(G)(G)(A)(G)(T)(G)(A)(G)(G)(C), (T)(T)(G)(G)(A)(T)(A)(G)(G)(C), (G)(T)(T)(A)(A)(C), (A)(T)(T)(C), (C), (A)(T)(T)(A)(G)(T)(G)(C), (A)(A)(A)(T)(A)(C), (C), (A)(C), (T)(G)(T)(T)(A)(T)(G)(T)(A)(A)(A)(G)(G)(G)(C), (C), (G)(A)(A)(T)(T)(A)(T)(G)(A)(G)(C), (C), (C), (G)(C), (A)(A)(T)(C), (A)(A)(T)(A)(T)(T)(A)(A)(G)(C), (T)(C), (G)(A)(T)(T)(C), (A)(C), (A)(A)(T)(G)(C), (G)(C), (G)(A)(G)(C), (A)(C), (G)(C), (G)(C), (A)(G)(A)(C), (A)(G)(C), (A)(C), (T)(C), (G)(T)(G)(A)(T)(C), (T)(A)(T)(T)(C), (T)(T)(C), (C), (A)(A)(G)(C), (T)(C), (C), (T)(T)(C), (C), (A)(G)(C), (C), (A)(C), (A)(G)(A)(G)(A)(T)(A)(C), (T)(G)(A)(T)(G)(C), (G)(G)(C), (G)(C), (G)(G)(T)(T)(A)(C), (C), (G)(T)(A)(A)(T)(G)(C), (C), (A)(A)(T)(A)(C), (C), (T)(C), (C), (A)(G)(C), (G)(A)(T)(T)(A)(A)(A)(A)(G)(T)(T)(A)(A)(A)(T)(G)(G)(T)(A)(C), (G)(C), (C), (C), (A)(C), (T)(C), (A)(G)(G)(C), (A)(G)(T)(G)(G)(G)(T)(C), (A)(G)(A)(C), (G)(G)(C), (G)(A)(A)(G)(G)(A)(C), (C), (A)(G)(G)(G)(A)(G)(G)(G)(T)(T)(T)(C), (A)(G)(A)(T)(A)(A)(A)(A)(A)(C), (T)(C), (C), (T)(T)(A)(G)(A)(A)(G)(T)(C), (G)(T)(G)(C), (T)(T)(G)(C), (C), (C), (A)(G)(T)(A)(G)(A)(C), (A)(A)(T)(G)(C), (C), (A)(C), (A)(T)(A)(C), (A)(T)(G)(T)(A)(A)(T)(T)(T)(T)(T)(T)(G)(T)(T)(T)(T)(G)(C), (G)(G)(T)(T)(C), (C), (G)(C), (G)(G)(A)(C), (C), (T)(C), (C), (T)(A)(G)(C), (C), (T)(T)(G)(C), (G)(T)(G)(T)(C), (C), (C), (A)(T)(G)(T)(G)(G)(A)(T)(G)(A)(A)(C), (G)(T)(A)(G)(T)(C), (G)(G)(C), (A)(T)(G)(T)(T)(G)(A)(T)(T)(T)(C), (G)(C), (C), (A)(G)(G)(A)(A)(C), (A)(T)(T)(G)(C), (G)(C), (G)(G)(A)(T)(T)(C), (A)(G)(G)(T)(T)(C), (A)(T)(G)(T)(T)(T)(T)(C), (C), (C), (C), (C), (A)(G)(A)(A)(C), (A)(C), (G)(G)(T)(G)(G)"
 ```
 :::
 :::
@@ -89,7 +89,7 @@ paste(randGenome, collapse = "")
 
 ::: {.cell-output .cell-output-stdout}
 ```
-[1] "Thymine (T)Guanine (G)Guanine (G)Adenine (A)Adenine (A)Thymine (T)Cytosine (C), Thymine (T)Thymine (T)Thymine (T)Adenine (A)Adenine (A)Thymine (T)Guanine (G)Thymine (T)Thymine (T)Cytosine (C), Cytosine (C), Guanine (G)Adenine (A)Cytosine (C), Cytosine (C), Thymine (T)Thymine (T)Thymine (T)Guanine (G)Adenine (A)Guanine (G)Cytosine (C), Cytosine (C), Thymine (T)Cytosine (C), Adenine (A)Adenine (A)Guanine (G)Thymine (T)Thymine (T)Guanine (G)Guanine (G)Adenine (A)Cytosine (C), Thymine (T)Adenine (A)Cytosine (C), Cytosine (C), Guanine (G)Cytosine (C), Guanine (G)Guanine (G)Cytosine (C), Cytosine (C), Cytosine (C), Cytosine (C), Cytosine (C), Guanine (G)Adenine (A)Cytosine (C), Cytosine (C), Guanine (G)Adenine (A)Guanine (G)Adenine (A)Guanine (G)Cytosine (C), Thymine (T)Adenine (A)Adenine (A)Cytosine (C), Thymine (T)Cytosine (C), Thymine (T)Adenine (A)Adenine (A)Adenine (A)Thymine (T)Guanine (G)Adenine (A)Thymine (T)Guanine (G)Cytosine (C), Adenine (A)Adenine (A)Guanine (G)Cytosine (C), Adenine (A)Guanine (G)Cytosine (C), Guanine (G)Cytosine (C), Guanine (G)Thymine (T)Guanine (G)Cytosine (C), Cytosine (C), Guanine (G)Adenine (A)Guanine (G)Thymine (T)Cytosine (C), Thymine (T)"
+[1] "(T)(G)(G)(A)(A)(T)(C), (T)(T)(T)(A)(A)(T)(G)(T)(T)(C), (C), (G)(A)(C), (C), (T)(T)(T)(G)(A)(G)(C), (C), (T)(C), (A)(A)(G)(T)(T)(G)(G)(A)(C), (T)(A)(C), (C), (G)(C), (G)(G)(C), (C), (C), (C), (C), (G)(A)(C), (C), (G)(A)(G)(A)(G)(C), (T)(A)(A)(C), (T)(C), (T)(A)(A)(A)(T)(G)(A)(T)(G)(C), (A)(A)(G)(C), (A)(G)(C), (G)(C), (G)(T)(G)(C), (C), (G)(A)(G)(T)(C), (T)"
 ```
 :::
 :::
@@ -139,28 +139,28 @@ Writing and executing a loop.
 myProduct <- 1
 
 for(j in 1:15){
-  myProduct <- myProduct + i
+  myProduct <- myProduct * i
   print(myProduct)
 }
 ```
 
 ::: {.cell-output .cell-output-stdout}
 ```
-[1] 11
-[1] 21
-[1] 31
-[1] 41
-[1] 51
-[1] 61
-[1] 71
-[1] 81
-[1] 91
-[1] 101
-[1] 111
-[1] 121
-[1] 131
-[1] 141
-[1] 151
+[1] 10
+[1] 100
+[1] 1000
+[1] 10000
+[1] 1e+05
+[1] 1e+06
+[1] 1e+07
+[1] 1e+08
+[1] 1e+09
+[1] 1e+10
+[1] 1e+11
+[1] 1e+12
+[1] 1e+13
+[1] 1e+14
+[1] 1e+15
 ```
 :::
 :::
@@ -216,7 +216,7 @@ randGenome
 
 ```{.r .cell-code}
 for(j in 1:15){
-  print(str_sub(randGenome, start = 1, end = 1))
+  print(str_sub(randGenome, start = i, end = i))
 }
 ```
 
@@ -399,10 +399,10 @@ Adenine_count <- 0
 #nchar: number of characters
 
 for(i in 1:nchar(randGenome)){
-  if(str_sub(randGenome, start = i, end = i) == "A"){
+  if(str_sub(randGenome, start = i, end = i) == "A")
     Adenine_count <- Adenine_count + 1
   }
-}
+
 Cytosine_count <- 0
 
 for(i in 1:nchar(randGenome)){
@@ -573,6 +573,8 @@ print(Guanine_count)
 
 
 ## Challenge 10
+
+Using the rosalind code, I was able to solve the Rosalind problem.
 
 
 ::: {.cell}
@@ -1025,26 +1027,284 @@ generate_3_mers(myString)
 
 ## Challenge 5
 
+The count pattern function takes in two arguments, string and pattern. This code returns the total number of matches found or occurrences of the pattern within the string. In the code block below, a random genome of 2000 is counted for CTG and it shows up 31 times within the random genome string.
+
 
 ::: {.cell}
 
 ```{.r .cell-code}
-nt_patterns <- function(string, pattern) {
+count_pattern <- function(string, pattern) {
   nt_matches <- 0
-  
-  for(i in seq(1,nchar(string))){
+  for(i in 1:nchar(string)){
     if(str_sub(string, i, i + str_length(pattern)-1) == pattern){
       nt_matches = nt_matches + 1
-  }
+    }
   }
   return(nt_matches)
 }
-nt_patterns(rand_genome(20000), "CTG")
+count_pattern(rand_genome(2000), "CTG")
 ```
 
 ::: {.cell-output .cell-output-stdout}
 ```
-[1] 309
+[1] 31
 ```
 :::
+:::
+
+
+Here a string from rosalind is imported.
+
+
+::: {.cell}
+
+```{.r .cell-code}
+rosalind_string <- "TTAGTCCCCAGTCCCCAGTCCCCTCCAGTCCCCGCAGTCCCCCAGTCCCCAGTCCCCCAGTCCCCAGTCCCCAGTCCCCAGCCAGTCCCCACCGGTGTGGTAGTCCCCCAAGTCCCCAAGTCCCCAGTGATAACAGTCCCCTTCTCTAAGTCCCCAGTCCCCGAGTCCCCAGTTGAGTCCCCCTAGTCCCCGCCTATAGTCCCCCCACGAGTCCCCTGAAGTCCCCTGAAAGTCCCCCTGACGCAAGTCCCCTAGTCCCCCAGTCCCCAGAAGTCCCCCAGTCCCCTAAGTCCCCTAGAGTCCCCAGTCCCCGAGAGTCCCCTGTAAGTCCCCCTCAGTCCCCGGCTCGAGTCCCCGATGAGTCCCCGAGTCCCCCCGAGTCCCCGGTTAGTCCCCAAGTCCCCGAGTCCCCGAGTCCCCTGAAGTCCCCGAGTCCCCTCGAGTCCCCAGTCCCCGCTAGTCCCCCTTAGTCCCCAGTCCCCGAGTCCCCAGTCCCCAGTCCCCAAGTCCCCCGTGGAGAAGTCCCCGCAGTCCCCAGTCCCCTCGATTAGTCCCCATGCGATAGTCCCCCAGTCCCCTGAGTCCCCAGTCCCCAAGTCCCCGTTAGTCCCCGAGTCCCCAAAATTAGTCCCCGAAGTCCCCCCGTAGTCCCCTGTGAGTCCCCGAGTCCCCAGTCCCCTTACGAGTCCCCGTCCAGTCCCCTGATTATATGAGAGTCCCCTTGGAGTCCCCTAGTCCCCTAAGTCCCCAGAGTGATTCTTAGTCCCCAAGTCCCCAGTCCCCGCTAGTCCCCATAGTCCCCAGTCCCCCGCAGTCCCCCTACCTCAGTCCCCAAGTCCCCCAGTCCCCCAGTCCCCGGTATTAGTCCCCGAAGTCCCCGAGTCCCCATACTCAAGTCCCCCAGTCCCCGGATGGTAGAGTCCCCAGTCCCCTAGTCCCCCCGAGTCCCCAGTCCCCCAGTCCCCACGGCGGCTAAAGTCCCCTAGTCCCCAGTCCCCGATGCAGTCCCCAAGTCCCCAGTCCCC"
+```
+:::
+
+
+The count pattern function is tested on this rosalind string. By looking at the code block below it is evident that AGTCCCAG shows up 25 times in the rosalind string. This code suggests this pattern appeared 25 times within this genome. This was the correct answer meaning the function worked.
+
+
+::: {.cell}
+
+```{.r .cell-code}
+count_pattern(rosalind_string, "AGTCCCCAG")
+```
+
+::: {.cell-output .cell-output-stdout}
+```
+[1] 25
+```
+:::
+:::
+
+
+# Replication Origin, Part 2
+
+## Challenge 1
+
+Here, I'm finding the most frequent words in a string. Find_fequent_kmers will generate a list of the most frequent k-mers in genomeString. The unique function removes duplicates.
+
+
+::: {.cell}
+
+```{.r .cell-code}
+find_frequent_kmers <- function(genome, k){
+  
+  #get the kmers
+  kmers <- generate_k_mer(genome, k)
+  kmers <- unique(kmers)
+  
+  #count occurences
+  kmer_counts <- rep(0, length(kmers))
+  for(i in 1:length(kmers)){
+    kmer_counts[i] <- count_pattern(genome, kmers[i])
+  }
+  #largest count
+  max_freq <- max(kmer_counts)
+  freq_kmers <- kmers[kmer_counts == max_freq]
+  
+  return(freq_kmers)
+}
+```
+:::
+
+
+Here the function is tested. The code block below returned two 2-mers "(TC and AT) in the random genome with a length of 10.
+
+
+::: {.cell}
+
+```{.r .cell-code}
+myGenome <- rand_genome(10)
+find_frequent_kmers(myGenome, 2)
+```
+
+::: {.cell-output .cell-output-stdout}
+```
+[1] "TC" "AT"
+```
+:::
+
+```{.r .cell-code}
+find_frequent_kmers("AAATAAAG", 3)
+```
+
+::: {.cell-output .cell-output-stdout}
+```
+[1] "AAA"
+```
+:::
+:::
+
+
+## Challenge 2
+
+The reverse_complement function takes a string and returns its reverse complement. The complement of A is T, the complement of G is C. The reverse_complement function reverses the order of the nucleotides and gives the complement of each nucleotide. In the code block below, ATTG is input and CAAT is output.
+
+
+::: {.cell}
+
+```{.r .cell-code}
+reverse_complement <- function(genomeSubString){
+    complement = c('A' = 'T', 'C' = 'G', 'G' = 'C', 'T' = 'A')
+    reverse_complement <- ''
+    for (nucleotide in rev(strsplit(genomeSubString, "")[[1]])){
+      reverse_complement <- paste(reverse_complement, complement[nucleotide], sep="")
+    }
+    return(reverse_complement)
+}
+reverse_complement("ATTG")
+```
+
+::: {.cell-output .cell-output-stdout}
+```
+[1] "CAAT"
+```
+:::
+:::
+
+
+# Replication Origin, Part 3
+
+## Challenge 1
+
+Here, we will find the most frequent words in a string. Initialize_k\_mer_dict gives possible combinations of kmers but doesn't count them. Instead it takes k and generates all possible DNA k-mers of length k containing the nucleotides A, C, G, and T.
+
+
+::: {.cell}
+
+```{.r .cell-code}
+initialize_k_mer_dict <- function(k){
+  nucleotides <- c("A", "C", "G", "T")
+
+  k_mers_dict <- expand.grid(rep(list(nucleotides), k)) %>%
+    unite("k_mers", everything(), remove = TRUE, sep = "") %>%
+    unique() %>%
+    mutate(count = 0)
+  
+  return(k_mers_dict)
+}
+
+k_mers_dict <- initialize_k_mer_dict(9)
+```
+:::
+
+
+Here, we utilize this function and it is evident that it returns a table giving the possible combinations of kmers.
+
+
+::: {.cell}
+
+```{.r .cell-code}
+initialize_k_mer_dict(2)
+```
+
+::: {.cell-output .cell-output-stdout}
+```
+   k_mers count
+1      AA     0
+2      CA     0
+3      GA     0
+4      TA     0
+5      AC     0
+6      CC     0
+7      GC     0
+8      TC     0
+9      AG     0
+10     CG     0
+11     GG     0
+12     TG     0
+13     AT     0
+14     CT     0
+15     GT     0
+16     TT     0
+```
+:::
+
+```{.r .cell-code}
+#gives possible combinations of kmers
+#doesn't count them 
+```
+:::
+
+
+In the code block below, L is window length, K is k-mer length and T is frequency threshold. The clump finding function takes in these 4 parameters, including genome. The function takes an initial window length from the beginning of genome. The count pattern functions counts the occurrences in the window. In this code block, j and i are iterators.
+
+
+::: {.cell}
+
+```{.r .cell-code}
+#L is window length
+#K is k-mer length
+# T is frequency threshold
+clump_finding <- function(genome, L, K, T) {
+  intial_window <- str_sub(genome, start = 1, end = L )
+  my_kmer_dict <- initialize_k_mer_dict(k)
+  
+  ng <- nchar(genome)
+  
+  for(i in 1:(L - (k - 1)) ) {
+    #don't want to escape the window
+    curr_kmer <- str_sub(intial_window, i, i+k-1)
+    curr_count <- count_pattern(intial_window, curr_kmer)
+#curr_kmer finds whatever kmer we're on, then curr_count counts how our curr_kmer appears in red window 
+#find the row in my_kmer_dict that corresponds to curr_kmer
+# then write curr_count into the count column
+    curr_row <- which(my_kmer_dict$k_mer == curr_kmer)
+    my_kmer_dict$count[curr_row] <- curr_count
+  }
+  candidates <- my_kmer_dict %>% 
+    filter(count>=t) %>%
+    pull(k_mer)
+  
+  for(j in 2:(ng - (L-2))) {
+    rem_pattern <- str_sub(genome, j - 1, j - 1 + (k-1))
+    add_pattern <- str_sub(genome, j + (L - 2) - (k-1), j + (L - 2))
+    
+    rem_row <- which(kmer_dict$k_mers == rem_pattern)
+    add_row <- which(kmer_dict$k_mers == add_pattern)
+    
+    kmer_dict$count[rem_row] <- kmer_dict$count[rem_row] - 1
+    kmer_dict$count[add_row] <- kmer_dict$count[add_row] + 1
+    
+    if(kmer_dict$count[add_row >= t]){
+      candidates <- append(candidates, add_pattern)
+      candidates <- unique(candidates)
+    }
+  }
+  return(candidates)
+}
+```
+:::
+
+::: {.cell}
+
+```{.r .cell-code}
+myGenome <- rand_genome(250000)
+```
+:::
+
+
+The function below returns the row where the k-mer column matches the string ACTTGCATG.
+
+
+::: {.cell}
+
+```{.r .cell-code}
+    my_kmers <- initialize_k_mer_dict(9)
+    which(my_kmers$k_mer == "ACTTGCATG")
+```
+
+::: {.cell-output .cell-output-stdout}
+```
+[1] 182005
+```
+:::
+
+```{.r .cell-code}
+    # which function identifies whhich row kmer is in
+```
 :::
