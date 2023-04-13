@@ -173,14 +173,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>randGenome</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] "T" "A" "C" "G" "G" "T" "G" "G" "C" "C" "C" "T" "A" "A" "A"</code></pre>
+<pre><code> [1] "C" "T" "G" "T" "C" "T" "A" "T" "T" "C" "G" "T" "C" "G" "A"</code></pre>
 </div>
 </div>
 <p>The block above creates the list for the random genome, and the block below will collapse it and make it more readable.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">paste</span>(randGenome, <span class="at">collapse =</span> <span class="st">""</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "TACGGTGGCCCTAAA"</code></pre>
+<pre><code>[1] "CTGTCTATTCGTCGA"</code></pre>
 </div>
 </div>
 <p>Before comparing my block with a someone else, I predict that another classmate’s will be a different random order. This is because we are instructing R to generate a random code, therefore it should be different every time we run it.</p>
@@ -195,94 +195,94 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>randGenomeChal3</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>   [1] "T" "C" "T" "T" "A" "C" "T" "G" "C" "A" "T" "A" "T" "C" "A" "A" "T" "G"
-  [19] "T" "A" "C" "G" "T" "C" "T" "T" "C" "T" "C" "G" "G" "A" "G" "C" "C" "C"
-  [37] "A" "A" "G" "A" "G" "C" "T" "G" "T" "T" "T" "G" "G" "G" "T" "C" "C" "G"
-  [55] "A" "T" "C" "G" "C" "C" "A" "T" "T" "T" "T" "C" "A" "A" "C" "G" "C" "A"
-  [73] "T" "C" "G" "T" "T" "G" "G" "T" "A" "G" "C" "T" "G" "A" "T" "C" "G" "G"
-  [91] "A" "A" "C" "A" "A" "G" "A" "C" "G" "G" "G" "G" "T" "A" "T" "C" "C" "T"
- [109] "G" "A" "C" "A" "C" "T" "A" "G" "C" "C" "C" "G" "T" "A" "C" "G" "G" "C"
- [127] "T" "A" "T" "A" "T" "T" "G" "C" "A" "C" "C" "C" "A" "T" "T" "G" "A" "G"
- [145] "C" "A" "C" "C" "T" "G" "C" "G" "C" "A" "A" "A" "A" "A" "G" "C" "A" "T"
- [163] "T" "T" "G" "A" "A" "T" "A" "T" "C" "G" "T" "A" "C" "A" "C" "T" "C" "G"
- [181] "C" "A" "T" "G" "G" "C" "G" "C" "G" "A" "A" "A" "T" "T" "G" "C" "C" "C"
- [199] "G" "C" "C" "C" "A" "G" "C" "T" "G" "C" "G" "C" "C" "T" "T" "G" "G" "G"
- [217] "C" "C" "A" "G" "T" "A" "A" "T" "C" "C" "T" "A" "A" "A" "T" "A" "C" "T"
- [235] "C" "T" "C" "T" "A" "G" "T" "G" "G" "G" "T" "T" "A" "A" "C" "G" "C" "A"
- [253] "C" "C" "A" "T" "T" "G" "A" "A" "C" "A" "A" "A" "C" "C" "C" "A" "G" "G"
- [271] "A" "T" "C" "G" "G" "G" "A" "T" "C" "A" "T" "A" "A" "T" "C" "A" "T" "G"
- [289] "C" "T" "G" "G" "G" "C" "A" "A" "C" "G" "T" "A" "G" "G" "A" "A" "T" "C"
- [307] "C" "T" "T" "G" "A" "T" "A" "C" "G" "G" "C" "C" "G" "A" "A" "C" "T" "C"
- [325] "G" "T" "C" "C" "T" "C" "G" "G" "C" "C" "T" "A" "T" "A" "C" "G" "G" "T"
- [343] "C" "C" "G" "T" "C" "G" "T" "C" "G" "T" "A" "A" "A" "C" "C" "G" "T" "C"
- [361] "C" "A" "T" "C" "T" "C" "T" "A" "G" "C" "C" "A" "G" "G" "T" "T" "T" "A"
- [379] "G" "G" "T" "A" "A" "C" "T" "T" "C" "A" "C" "A" "C" "G" "C" "C" "T" "G"
- [397] "T" "C" "G" "C" "A" "C" "A" "C" "A" "T" "C" "C" "G" "C" "G" "G" "C" "T"
- [415] "C" "A" "G" "T" "A" "G" "G" "A" "C" "A" "T" "A" "A" "A" "A" "G" "A" "G"
- [433] "G" "G" "T" "A" "T" "C" "A" "C" "G" "C" "A" "G" "G" "A" "T" "A" "T" "A"
- [451] "C" "A" "T" "A" "A" "A" "T" "A" "T" "C" "G" "C" "A" "A" "C" "C" "A" "A"
- [469] "G" "T" "G" "G" "T" "C" "C" "T" "G" "A" "C" "A" "A" "G" "A" "A" "C" "T"
- [487] "C" "T" "C" "G" "C" "G" "T" "A" "A" "G" "A" "A" "C" "G" "C" "A" "T" "C"
- [505] "G" "C" "G" "T" "T" "A" "T" "A" "C" "T" "G" "T" "A" "C" "A" "G" "T" "C"
- [523] "A" "C" "C" "T" "G" "G" "G" "C" "G" "A" "C" "G" "C" "A" "A" "G" "T" "G"
- [541] "C" "C" "A" "C" "C" "G" "T" "A" "A" "C" "T" "G" "T" "G" "A" "G" "T" "C"
- [559] "A" "A" "T" "A" "A" "T" "A" "T" "T" "C" "T" "C" "G" "T" "T" "C" "A" "T"
- [577] "C" "G" "C" "A" "G" "C" "A" "C" "T" "T" "G" "G" "T" "A" "A" "T" "C" "C"
- [595] "T" "T" "C" "G" "T" "G" "A" "A" "A" "T" "A" "T" "C" "A" "C" "G" "G" "C"
- [613] "A" "T" "C" "G" "C" "A" "T" "C" "G" "T" "C" "C" "C" "A" "A" "A" "C" "T"
- [631] "C" "G" "A" "C" "G" "G" "G" "G" "G" "A" "G" "A" "T" "C" "G" "G" "A" "C"
- [649] "G" "C" "T" "G" "C" "T" "T" "G" "T" "C" "G" "G" "T" "G" "G" "T" "G" "T"
- [667] "T" "G" "G" "G" "C" "A" "A" "A" "A" "G" "A" "A" "C" "G" "C" "G" "T" "T"
- [685] "A" "T" "G" "T" "A" "T" "T" "T" "A" "T" "T" "G" "T" "T" "C" "T" "G" "C"
- [703] "C" "C" "G" "C" "C" "G" "G" "A" "G" "A" "A" "C" "C" "T" "C" "G" "A" "T"
- [721] "C" "G" "G" "C" "A" "T" "T" "T" "G" "C" "T" "T" "G" "A" "A" "T" "G" "C"
- [739] "C" "A" "G" "C" "T" "G" "G" "G" "G" "T" "G" "G" "G" "C" "C" "G" "T" "C"
- [757] "C" "T" "A" "C" "G" "T" "C" "T" "A" "T" "G" "T" "C" "A" "T" "G" "T" "T"
- [775] "G" "T" "T" "C" "T" "C" "A" "G" "C" "C" "T" "G" "T" "G" "T" "A" "A" "T"
- [793] "C" "C" "T" "G" "G" "A" "T" "G" "A" "A" "A" "A" "C" "T" "C" "A" "C" "G"
- [811] "A" "A" "T" "G" "A" "A" "C" "G" "A" "T" "A" "G" "C" "A" "G" "A" "C" "C"
- [829] "C" "A" "G" "C" "T" "A" "A" "A" "T" "G" "A" "A" "T" "C" "G" "C" "G" "G"
- [847] "T" "T" "A" "A" "A" "T" "C" "T" "C" "A" "C" "T" "G" "C" "A" "C" "T" "C"
- [865] "T" "G" "A" "T" "A" "A" "A" "G" "G" "C" "C" "A" "T" "A" "G" "G" "A" "G"
- [883] "C" "G" "T" "A" "T" "G" "G" "C" "G" "G" "C" "C" "C" "A" "C" "T" "T" "G"
- [901] "T" "C" "C" "T" "T" "G" "T" "C" "T" "C" "A" "C" "T" "C" "A" "T" "C" "T"
- [919] "A" "G" "T" "C" "T" "A" "T" "G" "G" "A" "G" "G" "T" "C" "C" "A" "C" "T"
- [937] "G" "G" "A" "C" "A" "A" "A" "C" "A" "G" "C" "G" "A" "C" "G" "T" "G" "C"
- [955] "A" "G" "A" "A" "A" "A" "G" "G" "A" "G" "G" "C" "A" "G" "G" "C" "T" "C"
- [973] "A" "G" "A" "G" "C" "C" "A" "G" "C" "T" "G" "T" "C" "G" "T" "A" "A" "C"
- [991] "T" "A" "G" "A" "G" "T" "T" "C" "T" "T" "C" "T" "T" "C" "G" "A" "C" "C"
-[1009] "A" "C" "A" "C" "G" "C" "C" "G" "C" "G" "A" "C" "C" "G" "T" "T" "G" "T"
-[1027] "T" "T" "T" "C" "A" "G" "T" "G" "T" "G" "A" "C" "T" "C" "A" "T" "A" "A"
-[1045] "T" "A" "A" "G" "T" "T" "A" "C" "T" "C" "A" "A" "T" "A" "C" "A" "C" "T"
-[1063] "C" "T" "A" "T" "C" "C" "G" "C" "T" "C" "A" "G" "C" "C" "A" "G" "C" "A"
-[1081] "A" "A" "A" "T" "T" "G" "T" "C" "G" "A" "G" "A" "A" "A" "T" "T" "A" "T"
-[1099] "T" "C" "T" "T" "A" "C" "T" "C" "C" "A" "T" "C" "T" "T" "G" "G" "A" "T"
-[1117] "C" "T" "G" "T" "C" "G" "G" "T" "C" "A" "T" "T" "C" "T" "C" "T" "A" "C"
-[1135] "C" "T" "T" "A" "A" "T" "T" "T" "G" "A" "T" "C" "T" "A" "A" "G" "T" "T"
-[1153] "T" "G" "G" "A" "A" "T" "G" "T" "T" "C" "A" "T" "T" "A" "G" "G" "T" "T"
-[1171] "G" "A" "T" "A" "A" "C" "A" "C" "C" "G" "G" "T" "C" "T" "T" "C" "G" "A"
-[1189] "A" "A" "T" "T" "T" "G" "T" "C" "A" "C" "T" "A" "T" "C" "T" "T" "C" "A"
-[1207] "T" "T" "T" "A" "T" "A" "A" "T" "T" "G" "T" "A" "G" "C" "G" "G" "T" "A"
-[1225] "A" "G" "C" "T" "C" "A" "T" "T" "G" "A" "A" "C" "C" "G" "G" "A" "T" "A"
-[1243] "A" "C" "C" "C" "A" "T" "G" "C" "A" "G" "T" "G" "G" "G" "T" "G" "G" "A"
-[1261] "C" "G" "A" "T" "C" "C" "A" "A" "C" "A" "C" "T" "T" "T" "C" "G" "A" "C"
-[1279] "G" "G" "G" "T" "C" "A" "T" "T" "C" "G" "G" "A" "G" "A" "G" "C" "A" "T"
-[1297] "G" "T" "T" "T" "A" "T" "G" "G" "G" "A" "T" "G" "C" "T" "A" "C" "T" "G"
-[1315] "T" "C" "T" "A" "G" "G" "G" "T" "G" "C" "C" "T" "G" "C" "G" "T" "T" "C"
-[1333] "T" "T" "C" "A" "A" "C" "G" "G" "C" "T" "C" "C" "G" "T" "T" "G" "T" "G"
-[1351] "T" "T" "T" "C" "C" "A" "T" "C" "A" "A" "T" "G" "T" "C" "G" "T" "A" "C"
-[1369] "A" "T" "C" "A" "C" "T" "G" "C" "C" "A" "A" "A" "C" "A" "C" "G" "G" "G"
-[1387] "G" "G" "A" "A" "T" "A" "A" "A" "T" "G" "G" "C" "A" "T" "T" "A" "C" "G"
-[1405] "C" "G" "G" "C" "A" "T" "C" "T" "T" "C" "T" "A" "A" "C" "C" "C" "A" "A"
-[1423] "G" "C" "G" "G" "C" "A" "T" "T" "G" "A" "T" "T" "A" "A" "G" "G" "C" "A"
-[1441] "G" "G" "G" "T" "T" "G" "G" "C" "C" "A" "T" "G" "G" "A" "C" "A" "T" "A"
-[1459] "G" "A" "T" "T" "A" "C" "C" "G" "G" "C" "A" "A" "A" "A" "A" "C" "G" "G"
-[1477] "A" "A" "A" "C" "T" "G" "G" "T" "T" "T" "A" "C" "C" "C" "T" "C" "C" "G"
-[1495] "C" "T" "T" "A" "G" "T"</code></pre>
+<pre><code>   [1] "G" "C" "G" "A" "A" "T" "C" "T" "A" "A" "T" "A" "A" "A" "C" "A" "C" "G"
+  [19] "A" "A" "C" "A" "G" "C" "T" "A" "C" "C" "G" "C" "A" "T" "C" "G" "T" "A"
+  [37] "G" "A" "A" "A" "A" "A" "A" "C" "C" "G" "G" "G" "T" "A" "T" "C" "A" "A"
+  [55] "T" "G" "C" "C" "T" "A" "G" "C" "G" "T" "G" "T" "T" "T" "C" "T" "A" "G"
+  [73] "G" "G" "T" "T" "C" "A" "T" "A" "G" "G" "T" "T" "A" "G" "G" "A" "G" "A"
+  [91] "A" "G" "A" "T" "G" "A" "G" "G" "C" "G" "G" "C" "T" "G" "T" "A" "T" "C"
+ [109] "T" "T" "T" "C" "A" "T" "A" "G" "C" "G" "A" "T" "A" "G" "A" "G" "T" "G"
+ [127] "G" "G" "T" "C" "A" "G" "A" "A" "T" "T" "C" "A" "A" "A" "C" "A" "T" "G"
+ [145] "C" "C" "C" "C" "T" "C" "G" "A" "G" "T" "G" "G" "G" "A" "G" "C" "C" "C"
+ [163] "T" "T" "C" "A" "A" "G" "T" "T" "T" "A" "A" "G" "A" "C" "C" "C" "C" "C"
+ [181] "T" "A" "A" "A" "A" "C" "T" "G" "T" "C" "G" "G" "G" "C" "A" "A" "G" "A"
+ [199] "T" "A" "T" "T" "T" "A" "A" "T" "G" "T" "G" "A" "C" "T" "T" "T" "A" "C"
+ [217] "G" "T" "C" "T" "A" "C" "A" "T" "A" "T" "T" "A" "C" "G" "A" "A" "T" "T"
+ [235] "C" "G" "A" "G" "G" "C" "A" "T" "G" "G" "A" "C" "C" "A" "C" "C" "G" "C"
+ [253] "A" "G" "C" "T" "G" "A" "G" "G" "G" "T" "A" "A" "A" "A" "G" "T" "T" "G"
+ [271] "G" "G" "C" "T" "A" "A" "G" "A" "G" "T" "C" "T" "A" "G" "A" "G" "G" "G"
+ [289] "T" "G" "C" "A" "A" "A" "G" "T" "T" "T" "T" "T" "T" "G" "C" "T" "G" "T"
+ [307] "A" "A" "C" "A" "A" "A" "G" "T" "C" "C" "T" "A" "A" "A" "C" "T" "T" "A"
+ [325] "T" "T" "T" "T" "G" "C" "T" "T" "G" "G" "G" "C" "A" "C" "G" "C" "C" "A"
+ [343] "T" "A" "G" "A" "C" "G" "A" "C" "T" "G" "A" "T" "T" "T" "C" "G" "A" "A"
+ [361] "G" "G" "C" "C" "C" "A" "G" "G" "T" "A" "A" "C" "T" "C" "G" "A" "G" "A"
+ [379] "G" "G" "C" "G" "C" "G" "A" "G" "T" "T" "A" "G" "C" "C" "T" "C" "A" "T"
+ [397] "C" "A" "A" "C" "C" "G" "T" "A" "T" "C" "C" "C" "T" "T" "A" "A" "G" "T"
+ [415] "T" "G" "G" "C" "A" "A" "T" "C" "T" "C" "A" "A" "G" "C" "T" "A" "T" "T"
+ [433] "A" "C" "T" "A" "A" "T" "T" "T" "C" "C" "C" "C" "A" "A" "G" "C" "T" "A"
+ [451] "A" "G" "G" "T" "T" "C" "G" "T" "C" "A" "C" "A" "A" "T" "T" "A" "A" "C"
+ [469] "C" "T" "C" "G" "G" "C" "T" "G" "A" "T" "G" "C" "G" "T" "G" "G" "C" "G"
+ [487] "T" "C" "G" "A" "G" "G" "G" "G" "G" "C" "T" "A" "A" "T" "T" "C" "T" "G"
+ [505] "T" "C" "A" "G" "G" "G" "C" "C" "A" "G" "T" "T" "A" "T" "G" "T" "C" "G"
+ [523] "C" "A" "G" "C" "G" "T" "A" "G" "C" "C" "G" "T" "C" "G" "C" "A" "T" "A"
+ [541] "A" "A" "T" "T" "T" "A" "T" "T" "C" "T" "G" "G" "T" "C" "A" "G" "A" "C"
+ [559] "C" "G" "A" "G" "T" "C" "T" "G" "T" "T" "A" "C" "C" "T" "G" "C" "G" "T"
+ [577] "G" "A" "C" "G" "A" "T" "T" "C" "A" "T" "A" "C" "T" "A" "T" "C" "A" "G"
+ [595] "C" "A" "C" "G" "A" "T" "A" "G" "G" "G" "G" "G" "C" "T" "C" "C" "T" "C"
+ [613] "G" "T" "A" "A" "A" "C" "C" "A" "T" "A" "A" "A" "G" "T" "C" "G" "T" "C"
+ [631] "G" "G" "G" "C" "C" "G" "T" "T" "G" "G" "G" "T" "A" "G" "G" "T" "G" "T"
+ [649] "G" "C" "C" "T" "T" "T" "T" "A" "A" "T" "T" "A" "G" "A" "A" "C" "T" "A"
+ [667] "A" "C" "C" "C" "G" "A" "A" "C" "G" "T" "T" "C" "T" "T" "A" "C" "G" "T"
+ [685] "A" "G" "T" "C" "T" "G" "G" "C" "T" "A" "A" "A" "G" "G" "G" "G" "C" "G"
+ [703] "A" "T" "G" "A" "T" "C" "A" "T" "A" "G" "C" "C" "A" "A" "G" "T" "G" "C"
+ [721] "A" "A" "G" "G" "G" "C" "A" "G" "C" "T" "A" "G" "C" "G" "G" "T" "G" "T"
+ [739] "A" "A" "T" "G" "T" "T" "C" "G" "A" "G" "C" "A" "C" "C" "T" "C" "T" "G"
+ [757] "A" "A" "A" "G" "G" "T" "G" "A" "T" "T" "A" "C" "A" "A" "A" "C" "C" "T"
+ [775] "G" "A" "A" "T" "T" "T" "C" "A" "G" "G" "C" "A" "T" "A" "A" "T" "G" "A"
+ [793] "A" "C" "C" "C" "G" "C" "A" "T" "A" "T" "C" "C" "G" "G" "G" "C" "C" "A"
+ [811] "G" "C" "A" "C" "T" "T" "G" "T" "G" "C" "G" "A" "G" "T" "T" "A" "A" "A"
+ [829] "C" "C" "A" "A" "A" "T" "T" "T" "A" "T" "C" "T" "G" "G" "G" "G" "G" "A"
+ [847] "C" "A" "T" "G" "C" "T" "C" "C" "A" "A" "T" "G" "C" "A" "C" "C" "A" "C"
+ [865] "T" "A" "C" "C" "C" "A" "T" "C" "C" "T" "G" "T" "A" "T" "C" "C" "C" "G"
+ [883] "A" "T" "T" "C" "T" "G" "G" "G" "G" "A" "A" "C" "G" "C" "A" "C" "A" "C"
+ [901] "T" "C" "T" "G" "T" "A" "T" "T" "G" "T" "G" "T" "A" "A" "C" "G" "A" "A"
+ [919] "G" "A" "G" "G" "T" "A" "A" "A" "C" "T" "T" "T" "G" "C" "C" "C" "A" "T"
+ [937] "T" "T" "C" "T" "G" "T" "A" "G" "C" "C" "G" "G" "C" "C" "T" "G" "C" "G"
+ [955] "T" "G" "T" "C" "A" "C" "A" "A" "A" "T" "T" "C" "G" "A" "T" "G" "T" "A"
+ [973] "C" "A" "C" "A" "G" "C" "A" "A" "G" "A" "A" "A" "A" "C" "C" "A" "G" "G"
+ [991] "A" "T" "T" "G" "G" "T" "G" "C" "A" "C" "C" "T" "G" "A" "C" "C" "T" "A"
+[1009] "A" "G" "C" "G" "G" "A" "A" "C" "T" "A" "C" "C" "A" "T" "A" "A" "T" "C"
+[1027] "T" "A" "G" "G" "A" "G" "T" "C" "A" "C" "A" "C" "T" "T" "A" "A" "T" "C"
+[1045] "A" "G" "A" "C" "C" "G" "A" "T" "A" "C" "A" "T" "A" "C" "A" "A" "T" "C"
+[1063] "C" "T" "G" "C" "G" "G" "G" "C" "G" "G" "C" "C" "C" "A" "C" "A" "G" "G"
+[1081] "C" "C" "T" "T" "C" "G" "C" "T" "C" "G" "T" "A" "A" "C" "A" "T" "G" "C"
+[1099] "A" "A" "C" "A" "C" "T" "T" "C" "T" "G" "G" "G" "G" "T" "A" "A" "A" "T"
+[1117] "T" "T" "T" "A" "G" "G" "C" "G" "C" "C" "G" "T" "G" "T" "T" "T" "G" "A"
+[1135] "A" "G" "T" "T" "C" "C" "G" "T" "A" "G" "T" "A" "C" "C" "A" "C" "G" "A"
+[1153] "T" "G" "G" "T" "A" "A" "G" "T" "G" "G" "G" "G" "T" "G" "T" "T" "T" "T"
+[1171] "C" "G" "T" "G" "A" "A" "C" "A" "G" "G" "C" "G" "C" "G" "T" "C" "A" "A"
+[1189] "C" "T" "A" "G" "T" "G" "T" "T" "A" "A" "T" "G" "G" "C" "A" "A" "C" "G"
+[1207] "G" "C" "A" "G" "C" "A" "G" "T" "G" "C" "A" "T" "T" "T" "T" "T" "C" "C"
+[1225] "G" "T" "G" "A" "A" "A" "G" "A" "T" "C" "A" "A" "T" "A" "C" "A" "A" "A"
+[1243] "A" "A" "T" "C" "A" "C" "C" "A" "G" "C" "T" "T" "G" "C" "A" "C" "G" "C"
+[1261] "G" "G" "G" "G" "G" "C" "A" "T" "T" "C" "T" "T" "C" "T" "C" "A" "A" "C"
+[1279] "T" "A" "C" "G" "T" "C" "G" "A" "C" "T" "A" "A" "T" "A" "T" "C" "C" "G"
+[1297] "G" "G" "G" "A" "G" "A" "A" "C" "C" "G" "A" "T" "T" "C" "T" "G" "C" "G"
+[1315] "G" "G" "C" "A" "A" "T" "G" "T" "A" "T" "A" "A" "C" "T" "C" "C" "A" "A"
+[1333] "T" "G" "C" "T" "C" "A" "G" "C" "G" "A" "A" "T" "C" "T" "C" "C" "T" "A"
+[1351] "C" "G" "T" "T" "T" "A" "C" "T" "G" "T" "G" "A" "T" "A" "C" "T" "A" "C"
+[1369] "G" "A" "A" "T" "T" "G" "A" "A" "A" "A" "A" "C" "G" "A" "T" "C" "C" "G"
+[1387] "A" "A" "G" "G" "G" "G" "G" "A" "G" "C" "T" "A" "A" "C" "T" "C" "G" "C"
+[1405] "G" "A" "T" "G" "A" "C" "A" "A" "T" "C" "C" "C" "C" "T" "A" "G" "A" "A"
+[1423] "C" "C" "C" "C" "C" "A" "A" "A" "A" "T" "G" "A" "A" "A" "G" "T" "C" "G"
+[1441] "T" "G" "T" "C" "C" "T" "T" "A" "A" "C" "A" "A" "T" "C" "G" "C" "G" "T"
+[1459] "A" "A" "A" "A" "T" "T" "G" "C" "C" "C" "A" "C" "A" "A" "C" "C" "A" "C"
+[1477] "T" "C" "A" "A" "C" "C" "C" "A" "C" "C" "G" "T" "G" "C" "G" "A" "T" "G"
+[1495] "A" "C" "T" "A" "A" "T"</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">paste</span>(randGenomeChal3, <span class="at">collapse =</span> <span class="st">""</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "TCTTACTGCATATCAATGTACGTCTTCTCGGAGCCCAAGAGCTGTTTGGGTCCGATCGCCATTTTCAACGCATCGTTGGTAGCTGATCGGAACAAGACGGGGTATCCTGACACTAGCCCGTACGGCTATATTGCACCCATTGAGCACCTGCGCAAAAAGCATTTGAATATCGTACACTCGCATGGCGCGAAATTGCCCGCCCAGCTGCGCCTTGGGCCAGTAATCCTAAATACTCTCTAGTGGGTTAACGCACCATTGAACAAACCCAGGATCGGGATCATAATCATGCTGGGCAACGTAGGAATCCTTGATACGGCCGAACTCGTCCTCGGCCTATACGGTCCGTCGTCGTAAACCGTCCATCTCTAGCCAGGTTTAGGTAACTTCACACGCCTGTCGCACACATCCGCGGCTCAGTAGGACATAAAAGAGGGTATCACGCAGGATATACATAAATATCGCAACCAAGTGGTCCTGACAAGAACTCTCGCGTAAGAACGCATCGCGTTATACTGTACAGTCACCTGGGCGACGCAAGTGCCACCGTAACTGTGAGTCAATAATATTCTCGTTCATCGCAGCACTTGGTAATCCTTCGTGAAATATCACGGCATCGCATCGTCCCAAACTCGACGGGGGAGATCGGACGCTGCTTGTCGGTGGTGTTGGGCAAAAGAACGCGTTATGTATTTATTGTTCTGCCCGCCGGAGAACCTCGATCGGCATTTGCTTGAATGCCAGCTGGGGTGGGCCGTCCTACGTCTATGTCATGTTGTTCTCAGCCTGTGTAATCCTGGATGAAAACTCACGAATGAACGATAGCAGACCCAGCTAAATGAATCGCGGTTAAATCTCACTGCACTCTGATAAAGGCCATAGGAGCGTATGGCGGCCCACTTGTCCTTGTCTCACTCATCTAGTCTATGGAGGTCCACTGGACAAACAGCGACGTGCAGAAAAGGAGGCAGGCTCAGAGCCAGCTGTCGTAACTAGAGTTCTTCTTCGACCACACGCCGCGACCGTTGTTTTCAGTGTGACTCATAATAAGTTACTCAATACACTCTATCCGCTCAGCCAGCAAAATTGTCGAGAAATTATTCTTACTCCATCTTGGATCTGTCGGTCATTCTCTACCTTAATTTGATCTAAGTTTGGAATGTTCATTAGGTTGATAACACCGGTCTTCGAAATTTGTCACTATCTTCATTTATAATTGTAGCGGTAAGCTCATTGAACCGGATAACCCATGCAGTGGGTGGACGATCCAACACTTTCGACGGGTCATTCGGAGAGCATGTTTATGGGATGCTACTGTCTAGGGTGCCTGCGTTCTTCAACGGCTCCGTTGTGTTTCCATCAATGTCGTACATCACTGCCAAACACGGGGGAATAAATGGCATTACGCGGCATCTTCTAACCCAAGCGGCATTGATTAAGGCAGGGTTGGCCATGGACATAGATTACCGGCAAAAACGGAAACTGGTTTACCCTCCGCTTAGT"</code></pre>
+<pre><code>[1] "GCGAATCTAATAAACACGAACAGCTACCGCATCGTAGAAAAAACCGGGTATCAATGCCTAGCGTGTTTCTAGGGTTCATAGGTTAGGAGAAGATGAGGCGGCTGTATCTTTCATAGCGATAGAGTGGGTCAGAATTCAAACATGCCCCTCGAGTGGGAGCCCTTCAAGTTTAAGACCCCCTAAAACTGTCGGGCAAGATATTTAATGTGACTTTACGTCTACATATTACGAATTCGAGGCATGGACCACCGCAGCTGAGGGTAAAAGTTGGGCTAAGAGTCTAGAGGGTGCAAAGTTTTTTGCTGTAACAAAGTCCTAAACTTATTTTGCTTGGGCACGCCATAGACGACTGATTTCGAAGGCCCAGGTAACTCGAGAGGCGCGAGTTAGCCTCATCAACCGTATCCCTTAAGTTGGCAATCTCAAGCTATTACTAATTTCCCCAAGCTAAGGTTCGTCACAATTAACCTCGGCTGATGCGTGGCGTCGAGGGGGCTAATTCTGTCAGGGCCAGTTATGTCGCAGCGTAGCCGTCGCATAAATTTATTCTGGTCAGACCGAGTCTGTTACCTGCGTGACGATTCATACTATCAGCACGATAGGGGGCTCCTCGTAAACCATAAAGTCGTCGGGCCGTTGGGTAGGTGTGCCTTTTAATTAGAACTAACCCGAACGTTCTTACGTAGTCTGGCTAAAGGGGCGATGATCATAGCCAAGTGCAAGGGCAGCTAGCGGTGTAATGTTCGAGCACCTCTGAAAGGTGATTACAAACCTGAATTTCAGGCATAATGAACCCGCATATCCGGGCCAGCACTTGTGCGAGTTAAACCAAATTTATCTGGGGGACATGCTCCAATGCACCACTACCCATCCTGTATCCCGATTCTGGGGAACGCACACTCTGTATTGTGTAACGAAGAGGTAAACTTTGCCCATTTCTGTAGCCGGCCTGCGTGTCACAAATTCGATGTACACAGCAAGAAAACCAGGATTGGTGCACCTGACCTAAGCGGAACTACCATAATCTAGGAGTCACACTTAATCAGACCGATACATACAATCCTGCGGGCGGCCCACAGGCCTTCGCTCGTAACATGCAACACTTCTGGGGTAAATTTTAGGCGCCGTGTTTGAAGTTCCGTAGTACCACGATGGTAAGTGGGGTGTTTTCGTGAACAGGCGCGTCAACTAGTGTTAATGGCAACGGCAGCAGTGCATTTTTCCGTGAAAGATCAATACAAAAATCACCAGCTTGCACGCGGGGGCATTCTTCTCAACTACGTCGACTAATATCCGGGGAGAACCGATTCTGCGGGCAATGTATAACTCCAATGCTCAGCGAATCTCCTACGTTTACTGTGATACTACGAATTGAAAAACGATCCGAAGGGGGAGCTAACTCGCGATGACAATCCCCTAGAACCCCCAAAATGAAAGTCGTGTCCTTAACAATCGCGTAAAATTGCCCACAACCACTCAACCCACCGTGCGATGACTAAT"</code></pre>
 </div>
 </div>
 <p>The block above successfully creates the 1500 unit random genome.</p>
@@ -954,6 +954,82 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </div>
 <p>The key to the reverse complement function is defining what we want to see when a certain nucleotide is presented (ex: A = T). This function defines that and successfully reports the reverse complement for each given nucleotide.</p>
+</section>
+</section>
+<section id="replication-origin-part-3" class="level1">
+<h1>Replication Origin: Part 3</h1>
+<section id="challenge-1-3" class="level2">
+<h2 class="anchored" data-anchor-id="challenge-1-3">Challenge 1</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb102"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb102-1"><a href="#cb102-1" aria-hidden="true" tabindex="-1"></a>initialize_k_mer_dict <span class="ot">&lt;-</span> <span class="cf">function</span>(k){</span>
+<span id="cb102-2"><a href="#cb102-2" aria-hidden="true" tabindex="-1"></a>  nucleotides <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"A"</span>, <span class="st">"C"</span>, <span class="st">"G"</span>, <span class="st">"T"</span>)</span>
+<span id="cb102-3"><a href="#cb102-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb102-4"><a href="#cb102-4" aria-hidden="true" tabindex="-1"></a>  k_mers_dict <span class="ot">&lt;-</span> <span class="fu">expand.grid</span>(<span class="fu">rep</span>(<span class="fu">list</span>(nucleotides), k)) <span class="sc">%&gt;%</span></span>
+<span id="cb102-5"><a href="#cb102-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">unite</span>(<span class="st">"k_mers"</span>, <span class="fu">everything</span>(), <span class="at">remove =</span> <span class="cn">TRUE</span>, <span class="at">sep =</span> <span class="st">""</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb102-6"><a href="#cb102-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">unique</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb102-7"><a href="#cb102-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">count =</span> <span class="dv">0</span>)</span>
+<span id="cb102-8"><a href="#cb102-8" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb102-9"><a href="#cb102-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(k_mers_dict)</span>
+<span id="cb102-10"><a href="#cb102-10" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb102-11"><a href="#cb102-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb102-12"><a href="#cb102-12" aria-hidden="true" tabindex="-1"></a>k_mers_dict <span class="ot">&lt;-</span> <span class="fu">initialize_k_mer_dict</span>(<span class="dv">9</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Now, we will create the function <code>clump_finding</code> to help us determine the most frequent kmers and eventually find the origin of replication.</p>
+<p>Notes: L = window size</p>
+<p>k = kmer length</p>
+<p>t = frequency threshold</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb103"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb103-1"><a href="#cb103-1" aria-hidden="true" tabindex="-1"></a>initialize_k_mer_dict <span class="ot">&lt;-</span> <span class="cf">function</span>(k){</span>
+<span id="cb103-2"><a href="#cb103-2" aria-hidden="true" tabindex="-1"></a>  nucleotides <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"A"</span>, <span class="st">"C"</span>, <span class="st">"G"</span>, <span class="st">"T"</span>)</span>
+<span id="cb103-3"><a href="#cb103-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb103-4"><a href="#cb103-4" aria-hidden="true" tabindex="-1"></a>  k_mers_dict <span class="ot">&lt;-</span> <span class="fu">expand.grid</span>(<span class="fu">rep</span>(<span class="fu">list</span>(nucleotides), k)) <span class="sc">%&gt;%</span></span>
+<span id="cb103-5"><a href="#cb103-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">unite</span>(<span class="st">"k_mers"</span>, <span class="fu">everything</span>(), <span class="at">remove =</span> <span class="cn">TRUE</span>, <span class="at">sep =</span> <span class="st">""</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb103-6"><a href="#cb103-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">unique</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb103-7"><a href="#cb103-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">count =</span> <span class="dv">0</span>)</span>
+<span id="cb103-8"><a href="#cb103-8" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb103-9"><a href="#cb103-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(k_mers_dict)</span>
+<span id="cb103-10"><a href="#cb103-10" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb103-11"><a href="#cb103-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb103-12"><a href="#cb103-12" aria-hidden="true" tabindex="-1"></a>k_mers_dict <span class="ot">&lt;-</span> <span class="fu">initialize_k_mer_dict</span>(<span class="dv">9</span>)</span>
+<span id="cb103-13"><a href="#cb103-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb103-14"><a href="#cb103-14" aria-hidden="true" tabindex="-1"></a>clump_finding <span class="ot">&lt;-</span> <span class="cf">function</span>(genome, L, k, t){</span>
+<span id="cb103-15"><a href="#cb103-15" aria-hidden="true" tabindex="-1"></a>  initial_window <span class="ot">&lt;-</span> <span class="fu">str_sub</span>(genome, <span class="at">start =</span> <span class="dv">1</span>, <span class="at">end =</span> L)</span>
+<span id="cb103-16"><a href="#cb103-16" aria-hidden="true" tabindex="-1"></a>  my_kmer_dict <span class="ot">&lt;-</span> <span class="fu">initialize_k_mer_dict</span>(k)</span>
+<span id="cb103-17"><a href="#cb103-17" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span> L <span class="sc">-</span> k <span class="sc">+</span> <span class="dv">1</span>){</span>
+<span id="cb103-18"><a href="#cb103-18" aria-hidden="true" tabindex="-1"></a>    curr_kmer <span class="ot">&lt;-</span> <span class="fu">str_sub</span>(initial_window, i, i <span class="sc">+</span> (k <span class="sc">-</span> <span class="dv">1</span>))</span>
+<span id="cb103-19"><a href="#cb103-19" aria-hidden="true" tabindex="-1"></a>    curr_count<span class="ot">&lt;-</span> <span class="fu">count_pattern</span>(initial_window, curr_kmer)</span>
+<span id="cb103-20"><a href="#cb103-20" aria-hidden="true" tabindex="-1"></a>    curr_row <span class="ot">&lt;-</span> <span class="fu">which</span>(my_kmer_dict<span class="sc">$</span>kmer <span class="sc">==</span> curr_kmer)</span>
+<span id="cb103-21"><a href="#cb103-21" aria-hidden="true" tabindex="-1"></a>    my_kmer_dict<span class="sc">$</span>count[curr_row] <span class="ot">&lt;-</span> curr_count</span>
+<span id="cb103-22"><a href="#cb103-22" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb103-23"><a href="#cb103-23" aria-hidden="true" tabindex="-1"></a>  candidates<span class="ot">&lt;-</span> my_kmer_dict<span class="sc">%&gt;%</span></span>
+<span id="cb103-24"><a href="#cb103-24" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filer</span>(count<span class="sc">&gt;=</span>t)<span class="sc">%&gt;%</span></span>
+<span id="cb103-25"><a href="#cb103-25" aria-hidden="true" tabindex="-1"></a>    <span class="fu">pull</span>(k_mer)</span>
+<span id="cb103-26"><a href="#cb103-26" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb103-27"><a href="#cb103-27" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (j <span class="cf">in</span> <span class="dv">2</span><span class="sc">:</span>(ng <span class="sc">-</span> (L <span class="sc">-</span> <span class="dv">2</span>))){</span>
+<span id="cb103-28"><a href="#cb103-28" aria-hidden="true" tabindex="-1"></a>    rem_pattern <span class="ot">&lt;-</span> <span class="fu">str_sub</span>(genome, j <span class="sc">-</span> <span class="dv">1</span>, j <span class="sc">-</span> <span class="dv">1</span> <span class="sc">+</span> (k <span class="sc">-</span><span class="dv">1</span>))</span>
+<span id="cb103-29"><a href="#cb103-29" aria-hidden="true" tabindex="-1"></a>    add_pattern <span class="ot">&lt;-</span> <span class="fu">str_sub</span>(genome, j <span class="sc">+</span> (L <span class="sc">-</span> <span class="dv">2</span>) <span class="sc">-</span> (k <span class="sc">-</span> <span class="dv">1</span>), j <span class="sc">+</span> (L <span class="sc">-</span> <span class="dv">2</span>))</span>
+<span id="cb103-30"><a href="#cb103-30" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb103-31"><a href="#cb103-31" aria-hidden="true" tabindex="-1"></a>    rem_row <span class="ot">&lt;-</span> <span class="fu">which</span>(k_mers_dict<span class="sc">$</span>k_mers <span class="sc">==</span> rem_pattern)</span>
+<span id="cb103-32"><a href="#cb103-32" aria-hidden="true" tabindex="-1"></a>    add_row <span class="ot">&lt;-</span> <span class="fu">which</span>(k_mers_dict<span class="sc">$</span>k_mers <span class="sc">==</span> add_pattern)</span>
+<span id="cb103-33"><a href="#cb103-33" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb103-34"><a href="#cb103-34" aria-hidden="true" tabindex="-1"></a>    k_mers_dict<span class="sc">$</span>count[rem_row] <span class="ot">&lt;-</span> k_mers_dict<span class="sc">$</span>count[rem_row] <span class="sc">-</span> <span class="dv">1</span></span>
+<span id="cb103-35"><a href="#cb103-35" aria-hidden="true" tabindex="-1"></a>    k_mers_dict<span class="sc">$</span>count[add_row] <span class="ot">&lt;-</span> k_mers_dict<span class="sc">$</span>count[add_row] <span class="sc">+</span> <span class="dv">1</span></span>
+<span id="cb103-36"><a href="#cb103-36" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb103-37"><a href="#cb103-37" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>(k_mers_dict<span class="sc">$</span>count[add_row] <span class="sc">&gt;=</span> t){</span>
+<span id="cb103-38"><a href="#cb103-38" aria-hidden="true" tabindex="-1"></a>      candidates <span class="ot">&lt;-</span> <span class="fu">append</span>(candidates, add_pattern)</span>
+<span id="cb103-39"><a href="#cb103-39" aria-hidden="true" tabindex="-1"></a>      candidates <span class="ot">&lt;-</span> <span class="fu">unique</span>(candidates)</span>
+<span id="cb103-40"><a href="#cb103-40" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb103-41"><a href="#cb103-41" aria-hidden="true" tabindex="-1"></a>  } </span>
+<span id="cb103-42"><a href="#cb103-42" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(candidates)</span>
+<span id="cb103-43"><a href="#cb103-43" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="challenge-2-3" class="level2">
+<h2 class="anchored" data-anchor-id="challenge-2-3">Challenge 2</h2>
+<p>Here we must implement the code that we built in challenge 1 in order to apply it to an actual genome. Here, we will find all the 9-mers corresponding to (500, 3)-clumps within the genome for E.coli. While we have built a functioning function, it is not optimized to run on a genome as large as the E. coli one when looking for 9-mers.</p>
+<div class="cell">
+
+</div>
 </section>
 </section>
 

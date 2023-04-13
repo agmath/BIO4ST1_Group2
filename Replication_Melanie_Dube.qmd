@@ -610,18 +610,29 @@ clump_finding <- function(genome, L, k, t){
     filer(count>=t)%>%
     pull(k_mer)
   
-#find the row in the my_kmer_dict that corresponds to curr_kmer, then write the curr_count into the count column 
+  for (j in 2:(ng - (L - 2))){
+    rem_pattern <- str_sub(genome, j - 1, j - 1 + (k -1))
+    add_pattern <- str_sub(genome, j + (L - 2) - (k - 1), j + (L - 2))
+  
+    rem_row <- which(k_mers_dict$k_mers == rem_pattern)
+    add_row <- which(k_mers_dict$k_mers == add_pattern)
+    
+    k_mers_dict$count[rem_row] <- k_mers_dict$count[rem_row] - 1
+    k_mers_dict$count[add_row] <- k_mers_dict$count[add_row] + 1
+    
+    if(k_mers_dict$count[add_row] >= t){
+      candidates <- append(candidates, add_pattern)
+      candidates <- unique(candidates)
+    }
+  } 
+  return(candidates)
 }
-
 ```
 
 ## Challenge 2
 
-Here we must implement the code that we built in challenge 1 in order to apply it to an actual genome. Here, we will find all the 9-mers corresponding to (500, 3)-clumps within the genome for E.coli.
+Here we must implement the code that we built in challenge 1 in order to apply it to an actual genome. Here, we will find all the 9-mers corresponding to (500, 3)-clumps within the genome for E.coli. While we have built a functioning function, it is not optimized to run on a genome as large as the E. coli one when looking for 9-mers.
 
 ```{r}
-for(j in 2: ?){
-  remove_kmer <- str_sub(gemone, j-1, j-1+k-1)
-  add_kmer <- str_sub(genome, L+j-1-(k-1), L+j-1)
-}
+
 ```
