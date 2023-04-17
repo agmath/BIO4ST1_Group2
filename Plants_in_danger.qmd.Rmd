@@ -1,0 +1,144 @@
+---
+title: "Plants in Danger"
+author: "Adaobi Nwankwo"
+format: html
+editor: visual
+execute:
+  keep-md: true
+---
+
+## Plants in Danger Analysis
+
+Installing tidyverse and other packages.
+
+```{r}
+#Load the tidyverse
+library(tidyverse)
+library(kableExtra)
+#install.packages("tidymodels")
+library(tidymodels)
+#install.packages("skimr")
+library(skimr)
+```
+
+Loading in "Plants in Danger" dataset.
+
+```{r}
+# Get the Data
+
+# Read in with tidytuesdayR package 
+# Install from CRAN via: install.packages("tidytuesdayR")
+# This loads the readme and all the datasets for the week of interest
+
+# Either ISO-8601 date or year/week works!
+
+tuesdata <- tidytuesdayR::tt_load('2020-08-18')
+tuesdata <- tidytuesdayR::tt_load(2020, week = 34)
+
+plants <- tuesdata$plants
+
+# Or read in the data manually
+
+plants <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-08-18/plants.csv')
+actions <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-08-18/actions.csv')
+threats <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-08-18/threats.csv')
+
+```
+
+## Introduction
+
+This data takes in 500 extinct species as of 2020. 19.6% were endemic to Madagascar, 12.8% to Hawaiian islands. This dataset takes in several variables such as name, country, continent, threat, and action. Here, I loaded in a data set for the exploratory data of the Plants data set.
+
+```{r}
+library(skimr)
+plants %>%
+  skim()
+```
+
+```{r}
+plants %>%
+  head() %>%
+  kable() %>%
+  kable_styling(c("hover", "striped"))
+```
+
+## Abstract
+
+Exploring the data will make it easier to create hypotheses. Here are some interesting questions I asked.
+
+-   What region country has the most extinct plants?
+
+-   By taxonomic group, when was the period the species was last seen?
+
+-   Which threat has the biggest impact on plants becoming extinct.
+
+-   After finding the biggest threat, what taxonomic group is effected by it the most?
+
+## Hypothesis
+
+The biggest threat to plant extinction is pollution. Pollution is one of the biggest effects on our planet today.
+
+## Answering Our Questions
+
+```{r}
+plants %>%
+  count(country)
+plants %>%
+  ggplot() +
+  geom_bar(mapping = aes(x = country), color = "hotpink", fill = "forestgreen") +
+  labs(title ="Country vs. Count", x = "Country", y = "Count") +
+  coord_flip()
+```
+
+By using this count function, it is evident that Madagascar has the highest number of extinct plants with a count of 98. The second highest is United States with a count of 66. The third highest is Ecuador with a count of 52.
+
+```{r}
+plants %>%
+  group_by(group) %>%
+  count(year_last_seen)
+```
+
+Algae was last seen in 1979. Cycad was last seen in 2020. Conifer was last seen in 1959.Ferns and Allies were last seen in 2020. Flowering plants were last seen in 2020.
+
+```{r}
+plants %>%
+  count(threat_AA)
+plants %>%
+  count(threat_BRU)
+plants %>%
+  count(threat_RCD)
+plants %>%
+  count(threat_ISGD)
+plants %>%
+  count(threat_EPM)
+plants %>%
+  count(threat_CC)
+plants %>%
+  count(threat_HID)
+plants %>%
+  count(threat_P)
+plants %>%
+  count(threat_TS)
+plants %>%
+  count(threat_NSM)
+plants %>%
+  count(threat_GE)
+plants %>%
+  count(threat_NA)
+```
+
+The biggest threat on extinct plants is agriculture and aquaculture with a number of 227. This takes in two large groups so it makes sense that this has a big effect. The threat transportation corridor had the lowest threat number of 11. Pollution only has a number of 14 and I was expecting this to be the highest number.
+
+```{r}
+plants %>%
+  group_by(group) %>%
+  count(threat_AA)
+
+
+```
+
+The agriculture and aquaculture threat poses a large threat to the taxonomic group, flowering plant.
+
+## Conclusion
+
+Using this data set, I was able to answer all of my questions. Learning about plants and the threats posed to them was very interesting. There are several threats, the highest being agriculture and aquaculture. The most recent plant to go extinct was the cycad. The data set also takes in current actions being taken to prevent plants from going extinct. Some of these actions include land and water protection, species management, law & policy, research and monitoring, and education and awareness. My hypothesis was not supported as it is not the biggest cause of plant extinction, it's actually one of the lowest.
